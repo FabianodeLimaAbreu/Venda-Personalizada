@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <style type="text/css">
+      @charset "utf-8";
+      /* GERAL */
+      body,
+      html,
+      div,
+      span,
+      a,
+      ul,
+      li,
+      dl,
+      dt,
+      dd,
+      section,
+      header,
+      p,
+      form,
+      fieldset,
+      button,
+      input {
+        border: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        text-decoration: none;
+        outline: none;
+      }
+      header,
+      section,
+      footer,
+      aside,
+      nav,
+      main,
+      article,
+      figure,
+      a,
+      span,
+      :after,
+      :before {
+        display: block;
+      }
+      body * {
+        outline: none;
+        border: 0;
+      }
+      html object {
+        display: none;
+      }
+      /**/
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+      strong {
+        font-weight: 700;
+        display: block;
+        font-size: 0.9375rem;
+        color: #535658;
+      }
+      /* Variables */
+      /* Mixins and Functions */
+      /*******************************
+
+                  GLOBAL
+      *******************************/
+      .hide,
+      main nav > ul > li > ul,
+      main nav > ul > li.active > ul.disabled,
+      main form fieldset legend,
+      main .form fieldset legend {
+        display: none !important;
+        opacity: 0;
+        height: 0;
+      }
+      .w-500 {
+        width: 500px !important;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      .l-both {
+        border-top: 2px solid #ced4d9;
+        border-bottom: 2px solid #ced4d9;
+        display: block;
+        padding: 0.625em;
+        margin: 0.625em 0;
+      }
+      .l-bottom {
+        border-bottom: 2px solid #ced4d9;
+        display: block;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      .title {
+        line-height: 1.125em;
+        text-align: left;
+        font-size: 1.125em;
+        font-weight: 700;
+      }
+      .form-fields,
+      input[type=text],
+      input[type=password],
+      textarea {
+        border: 1px solid #cad0d6;
+      }
+      input[type=text],
+      input[type=password] {
+        text-align: left;
+        color: #535659;
+        font-size: 0.93em;
+        font-weight: 400;
+        padding: 10px;
+        margin: 6px 0 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input[type=text].w-90,
+      input[type=password].w-90 {
+        width: 90%;
+      }
+      input[type=text].amount,
+      input[type=password].amount {
+        width: 90px;
+        margin-right: 10px;
+      }
+      textarea {
+        text-align: left;
+        color: #535659;
+        font-size: 0.93em;
+        font-weight: 400;
+        padding: 10px;
+        margin: 6px 0 5px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+      }
+      .radio {
+        width: 20%;
+      }
+      .radio label {
+        display: inline-block !important;
+        cursor: pointer;
+        position: relative;
+        width: 140px;
+        padding-left: 30px;
+        margin-right: 25px;
+        vertical-align: middle;
+      }
+      .checkbox label {
+        display: inline-block !important;
+        cursor: pointer;
+        position: relative;
+        width: 55px;
+        padding-left: 30px;
+        margin-right: 25px;
+        vertical-align: middle;
+      }
+      .radio > em,
+      .checkbox > em {
+        margin: 0 20px 0 -20px;
+      }
+      .radio label:before,
+      .checkbox label:before,
+      .radio label .before,
+      .checkbox label .before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #f3f3f3;
+        border: 1px solid #e6e7e8;
+        border-radius: 8px;
+      }
+      .radio input[type=radio],
+      .checkbox input[type=checkbox] {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        position: absolute;
+      }
+      .radio label:before {
+        border-radius: 8px;
+      }
+      .checkbox label:before {
+        border-radius: 0;
+      }
+      .radio.nec,
+      .radio.nec2 {
+        width: 69px;
+        height: 44px;
+        top: 5px;
+        float: left;
+        padding-top: 7px;
+        margin-left: 2px;
+      }
+      .radio.nec2 {
+        width: 60px;
+        margin-left: 10px;
+      }
+      .checkbox input[type=checkbox]:checked + label:before,
+      .checkbox input[type=checkbox]:checked + label .before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        content: "\f00c";
+        font-size: 1.1em;
+        color: #0056a5;
+        text-align: center;
+        line-height: 0.9em;
+      }
+      .radio input[type=radio]:checked + label:before,
+      .radio input[type=radio]:checked + label .before {
+        font-family: FontAwesome;
+        content: "\f111";
+        color: #0056a5;
+        font-size: 0.91em;
+        text-align: center;
+        line-height: 1.2em;
+      }
+      label {
+        display: block !important;
+        font-weight: 700;
+        color: #535659;
+        font-size: 0.93em;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+      }
+      body {
+        font: normal 100% 'Lato', sans-serif;
+      }
+      .header {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 60px;
+      }
+      .header img {
+        margin: 10px;
+      }
+      .header .btn {
+        text-align: center;
+        font-size: 0.93em;
+        font-weight: 700;
+        border: 1px solid #3374b5;
+        background: #287bca;
+        letter-spacing: -0.07em;
+        padding: 0 1em;
+        height: 38px;
+        cursor: pointer;
+        z-index: 99;
+        margin: 10px 10px 7px 0;
+        color: #fff;
+      }
+      .header .btn:before {
+        content: "";
+        height: 38px;
+        width: 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .header .btn span {
+        padding-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      ul.form {
+        margin-bottom: 15px;
+      }
+      ul.form li {
+        width: 20%;
+        display: inline-block;
+      }
+      ul.form li.odd1 {
+        margin-right: -90px;
+      }
+      .container {
+        position: relative;
+        float: left;
+        width: 80%;
+        height: auto;
+        margin: 50px 150px;
+      }
+      .container p.title {
+        padding: 20px 0 10px 0;
+      }
+      div.conditions {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      /* TABLE */
+      table {
+        width: 100%;
+        margin-top: 100px;
+        font-size: 0.79em;
+        font-weight: 700;
+        table-layout: fixed;
+      }
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 5px;
+        text-align: left;
+      }
+      table th {
+        height: 35px;
+        color: white;
+        background-color: #a3acb5;
+      }
+      table td {
+        height: 30px;
+        word-wrap: break-word;
+        border-top: 2px solid #e7e7e8;
+        border-bottom: 2px solid #e7e7e8;
+      }
+      .fst {
+        border-left: 2px solid #e7e7e8;
+      }
+      .lst {
+        border-right: 2px solid #e7e7e8;
+      }
+      .content {
+        width: 40%;
+        float: left;
+      }
+      .row {
+        width: 100%;
+        margin-top: 5px;
+      }
+      .three {
+        width: 35%;
+      }
+      .last {
+        width: 35%;
+      }
+      .subtitle {
+        text-align: left;
+        color: #535659;
+        font-size: 0.9375em;
+        font-weight: 700;
+      }
+      .answer {
+        padding: 10px;
+        font-size: 0.9375em;
+        line-height: 24px;
+      }
+      .closer1 {
+        margin-left: -130px;
+      }
+      .closer2 {
+        margin-left: -170px;
+      }
+      p.answer.two {
+        line-height: 10px;
+      }
+      input[disabled] {
+        background: #ebeced;
+      }
+      #qualityOther {
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="http://institucionalteste/vp_personalizada/images/logo-focus-textil.png" height="38" width="141"/>
+    </div>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Proposta VP Nº</th>
+          <th>Cód. Cliente</th> 
+          <th>Nome Cliente</th>
+          <th>Gerente Comercial</th>
+          <th>Data</th>
+        </tr>
+        <tr>
+          <td id="proposalNr" class="fst"></td>
+          <td id="clientCode"></td> 
+          <td id="clientName"></td>
+          <td id="commercialManager"></td>
+          <td id="vpDate" class="lst"></td>
+        </tr>
+      </table>
+      <div class="l-bottom">
+        <p class="title">A Solicitação de Venda Personalizada foi considerada:</p>
+        <ul class="form">
+          <li class="odd1">
+            <div class="radio">
+              <input id="considered-item-1" type="radio" name="considered" value="1" />
+              <label for="considered-item-1">Viável</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <input id="considered-item-2" type="radio" name="considered" value="2" checked />
+              <label for="considered-item-2">Viável com restrição</label>
+            </div>
+          </li>
+          <li class="odd">
+            <div class="radio">
+              <input id="considered-item-3" type="radio" name="considered" value="3" />
+              <label for="considered-item-3">Inviável</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--
+      Se #considered-item-2, tira o hide de div.practicable
+      Se #considered-item-3, tira o hide de div.impracticable
+      -->
+      <div class="l-bottom practicable hide">
+        <p class="title">Para que esta Solicitação se torne viável é necessária a seguinte alteração:</p>
+          <ul class="form">
+            <li class="w-500"><textarea id="practicable" rows="4"></textarea></li>
+          </ul>
+      </div>
+      <div class="l-bottom impracticable hide">
+        <p class="title">Esta Solicitação é inviável pelos seguintes motivos:</p>
+          <ul class="form">
+            <li class="w-500"><textarea id="impracticable" rows="4"></textarea></li>
+          </ul>
+      </div>
+      <div class="conditions">
+        <p class="title">Com as seguintes condições:<br><br></p>
+        <div class="content">
+          <p class="subtitle">Entrega da Produção tem data limite?</p>
+          <p id="limitedDate" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Até data limite</p>
+          <p id="limitedDateValue" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Cliente necessita de corte 5m da produção?</p>
+          <p id="hasCut" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Até data limite</p>
+          <p id="hasCutValue" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Cliente necessita de 1 peça de tecido para mostruário?</p>
+          <p id="needShowcase" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Até data limite</p>
+          <p id="needShowcaseValue" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Preço do artigo (Tabela 90 Dias):</p>
+          <p class="answer two"><strong id="price">Preço: </strong><br><strong id="width">Prazo Médio de Pagamento (Dias): </strong></p>
+        </div>
+        <div class="content row">
+          <p class="subtitle">Meio de Transporte:</p>
+          <p id="exportBy" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Cliente exige exclusividade por um período?</p>
+          <p id="requiresExclusivityDate" class="answer"></p>
+        </div>
+        <div class="content">
+          <p class="subtitle">Até data limite</p>
+          <p id="requiresExclusivityDateValue" class="answer"></p>
+        </div>
+        <div class="content row">
+          <p class="subtitle">Quantidade estimada pelo cliente:</p>
+        </div>
+        <div class="content three">
+          <p class="subtitle answer">Nome/código por cor</p>
+          <p id="colorName" class="answer"></p>
+        </div>
+        <div class="content three closer1">
+          <p class="subtitle answer">Quantidade</p>
+          <p id="colorAmount" class="answer"></p>
+        </div>
+        <div class="content three closer2">
+          <p class="subtitle answer">Este produto segue o Critério de Qualidade Focus</p>
+          <div class="checkbox answer">
+            <input id="qualityJeans" type="checkbox" name="quality" value="Jeans" />
+            <label for="qualityJeans">Jeans</label>
+            <input id="qualityWorkwear" type="checkbox" name="quality" value="Workwear" />
+            <label for="qualityWorkwear">Workwear</label>
+            <input id="qualityModa" type="checkbox" name="quality" value="Moda" />
+            <label for="qualityModa">Moda</label>
+            <input id="qualityHome" type="checkbox" name="quality" value="Home" />
+            <label for="qualityHome">Home</label>
+            <input id="qualityOtherBox" type="checkbox" name="quality" value="Outro" />
+            <label for="qualityOtherBox">Outro</label>
+            <input id="qualityOther" type="text" name="quality" placeholder="Especificar" value="" disabled />
+          </div>
+        </div>
+        <div class="content row">
+          <p class="subtitle">Observações:</p>
+          <textarea id="comment" class="answer"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

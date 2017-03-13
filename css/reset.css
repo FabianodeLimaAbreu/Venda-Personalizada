@@ -1,0 +1,81 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, br, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, input, textarea, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1
+}
+html {
+	overflow: hidden
+}
+a {
+	text-decoration: none;
+	outline: none !important;
+	ie-dummy: expression(this.hideFocus=true)
+}
+a img, :link img, :visited img {
+	border: 0;
+	outline: none !important
+}
+ul li {
+	list-style: none
+}
+:focus {
+	outline: none !important
+}
+ins {
+	text-decoration: none
+}
+del {
+	text-decoration: line-through
+}
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold
+}
+input, select {
+	vertical-align: middle
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+.floatLeft {
+	float: left;
+}
+img.floatLeft {
+	margin: 0 10px 10px 10px
+}
+.floatRight {
+	float: right;
+}
+img.floatRight {
+	margin: 0 10px 10px 10px
+}
+.floatClear, .cleaner {
+	clear: both
+}
+br.floatClear {
+	margin: -1px -1px 0 0;
+	width: 1px;
+	height: 1px;
+	clear: both
+}
+.alignRight {
+	text-align: right
+}
+.alignCenter {
+	text-align: center
+}
+.hide{
+	display:none;
+}

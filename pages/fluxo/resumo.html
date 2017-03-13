@@ -1,0 +1,360 @@
+<div class="vpResume">
+	<a class="btn right close" href="javascript:void(0);"><i class="fa fa-close" aria-hidden="true"></i>Fechar</a>
+	<span class="little-break">&nbsp;</span>
+	<h2 class="t-center"><p>Resumo da Solicitação</p></h2>
+	<div >
+		<h2 class="title">Identificação do Cliente</h2>
+		<div class="table_min no_latbars writter_container" name="Dados">
+			<dl class="w-15 first">
+				<dt>Código</dt>
+				<dd class="writter_item" name="Cod"></dd>
+			</dl>
+			<dl class="w-35">
+				<dt>Razão Social</dt>
+				<dd class="writter_item" name="Razao"></dd>
+			</dl>
+			<dl class="w-25">
+				<dt>Nome Fantasia</dt>
+				<dd class="writter_item" name="Nome"></dd>
+			</dl>
+			<dl class="w-25 last">
+				<dt>Marca</dt>
+				<dd class="writter_item" name="Marca"></dd>
+			</dl>	
+			<dl class="w-30 first">
+				<dt>Contato</dt>
+				<dd class="writter_item" name="Contato"></dd>
+			</dl>
+			<dl class="w-25">
+				<dt>E-mail</dt>
+				<dd class="writter_item" name="Email"></dd>
+			</dl>
+			<dl class="w-15">
+				<dt>Telefone</dt>
+				<dd class="writter_item" name="Telefone"></dd>
+			</dl>
+			<dl class="w-30 last">
+				<dt>Gerente Comercial</dt>
+				<dd class="writter_item" name="Gestor"></dd>
+			</dl>
+		</div>
+	</div>
+	<div class="l-bottom segmentacao writter_container" name="Segmentacao">
+		<h2 class="title">Segmentação</h2>
+		<p class="subtitle">Cliente compra tecidos da Focus?</p>
+		<p class="answer buyFocus"></p>
+        <ul class="form">
+        	<li class="segmentacao">
+				<label for="confeccao" class="hide">Confecção</label>
+				<label for="privateLabel" class="hide">P.L.- Private Label</label>
+				<label for="atacado" class="hide">Atacado</label>
+				<label for="varejo" class="hide">Varejo</label>
+				<label for="setorIndustrial" class="hide">Setor industrial de beneficiamento</label>
+				<label for="workwear" class="hide">Workwear (W.W)</label>
+				<label for="homewear" class="hide">Homewear</label>
+				<label for="modaVestuario" class="hide">Moda vestuário</label>
+				<label for="modaIntima" class="hide">Moda Íntima</label>
+				<label for="setorCalcadista" class="hide">Setor Calçadista</label>
+				<label for="redeLojas" class="hide">Rede de Lojas</label>
+				<label for="grandePorte" class="hide">Grande Porte</label>
+				<label for="pequenoPorte" class="hide">Pequeno Porte</label>
+				<label for="gestorMarca" class="hide">Gestor da Marca</label>
+				<label for="workwear-2" class="hide">Workwear (W.W)</label>
+				<label for="homewear-2" class="hide">Homewear</label>
+				<label for="modaVestuario-2" class="hide">Moda vestuário</label>
+				<label for="modaIntima-2" class="hide">Moda Íntima</label>
+				<label for="setorCalcadista-2" class="hide">Setor Calçadista</label>
+        	</li>
+        </ul>
+	</div>
+	<div class="l-bottom base writter_container" name="Base">
+		<h2 class="title">Necessidade do Cliente</h2>
+		<div class="exist hide">
+			<p class="subtitle">Base Existente</p>
+			<p class="answer existBase"></p>
+	        <ul class="form">
+	        	<li class="existBaseBoxes">
+					<label for="tinto" class="hide">Cor Nova</label>
+					<label for="estampado" class="hide">Estampa Nova</label>
+					<label for="fio_tinto" class="hide">Padronagem  Nova (Fio Tinto)</label>
+	        	</li>
+	        </ul>
+			<aside class="answer">
+				<p class="title">ARTIGO</p>
+				<p id="existBaseSku" class="answer"></p>
+			</aside>
+        </div>
+		<div class="totalNew hide">
+			<p class="subtitle">Base Nova</p>
+			<p class="answer">Totalmente Nova</p>
+	        <ul class="form">
+	        	<li class="totalNew">
+					<label for="plano" class="hide">Plano</label>
+					<label for="malha" class="hide">Malha</label>
+					<label for="naoTecido" class="hide">Não Tecido</label>
+					<label for="outros" class="hide">Outros</label>
+					<label for="tinto2" class="hide">Tinto</label>
+					<label for="fio_tinto2" class="hide">Fio tinto</label>
+					<label for="estampado2" class="hide">Estampado</label>
+	        	</li>
+	        </ul>
+	        <aside class="answer">
+	        	<ul>
+	        		<li id="others"><strong>Descrição da necessidade: </strong></li>
+	        	</ul>
+	        </aside>
+        </div>
+		<div class="similar hide">
+			<p class="subtitle">Base Nova</p>
+			<aside class="answer">
+				<p>Similar à alguma base da Focus</p>
+				<em id="sku"><strong>ARTIGO</strong></em>
+			</aside>
+			<p class="subtitle">Qual alteração deseja fazer?</p>
+			<aside class="answer">
+				<dl>
+					<dt><strong>Largura (cm)</strong></dt>
+					<dd id="width"></dd>
+					<dd id="widthDescription"></dd>
+				</dl>
+				<dl>
+					<dt><strong>Gramatura</strong></dt>
+					<dd id="grammageA"></dd>
+					<dd id="grammageDescription"></dd>
+				</dl>
+				<dl class="last">
+					<dt><strong>Rendimento (m/kg)</strong></dt>
+					<dd id="yieldA"></dd>
+					<dd id="yieldDescription"></dd>
+				</dl>
+				<dl>
+					<dt><strong>Composição</strong></dt>
+					<dd id="composition"></dd>
+				</dl>
+				<dl></dl>
+				<dl class="last">
+					<dt><strong>Acabamento</strong></dt>
+					<dd id="finishing"></dd>
+				</dl>
+				<ul>
+					<li id="others2"><strong>Descrição da necessidade: </strong></li>
+				</ul>
+			</aside>
+        </div>
+	</div>
+	<div class="l-bottom amostra writter_container" name="Amostra">
+		<h2 class="title">Amostra</h2>
+		<p id="noSample" class="answer hide">Não há amostras.</p>
+		<div class="hasSample">
+			<p class="subtitle">Tipo de Amostra:</p>
+			<p class="answer">(Clique no código de amostra para visualizar)</p>
+			<p class="answer"><strong>Identificação da amostra</strong></p>
+			<ul id="codigoAmostra" class="answer"></ul>
+			<ul class="form amostra"></ul>
+		</div>
+	</div>
+	<div class="l-bottom finalidade_produto writter_container" name="finalidadeProduto">
+		<h2 class="title">Finalidade do Produto</h2>
+        <ul class="form hide">
+        	<p class="subtitle">Segmento</p>
+			<li>
+				<label for="segmentoFeminino" class="hide">Feminino</label>
+				<label for="segmentoHome" class="hide">Home</label>
+				<label for="segmentoMasculino" class="hide">Masculino</label>
+				<label for="segmentoWorkwear" class="hide">Workwear</label>
+				<label for="segmentoInfantil" class="hide">Infantil</label>
+				<label for="segmentoModaIntima" class="hide">Moda Íntima</label>
+				<label for="segmentoBaseEstamparia" class="hide">Base p/ estamparia</label>
+				<label for="segmentoBebe" class="hide">Bebê</label>
+				<label for="segmentoOutros" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+        	<p class="subtitle">Modelagem</p>
+			<li>
+				<label for="modelagemAmplaOversize" class="hide">Ampla/Oversize</label>
+				<label for="modelagemPadraoFit" class="hide">Padrão/Fit</label>
+				<label for="modelagemJustaSlim" class="hide">Justa/Slim</label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Top</p>
+			<li>
+				<label for="topBlazer" class="hide">Blazer</label>
+				<label for="topBlusa" class="hide">Blusa</label>
+				<label for="topCamisa" class="hide">Camisa</label>
+				<label for="topCamiseta" class="hide">Camiseta</label>
+				<label for="topJaqueta" class="hide">Jaqueta</label>
+				<label for="topOutros" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Bottom</p>
+			<li>
+				<label for="bottomCalca" class="hide">Calça</label>
+				<label for="bottomSaia" class="hide">Saia</label>
+				<label for="bottomShortsBermuda" class="hide">Shorts/Bermuda</label>
+				<label for="bottomOutros" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Home</p>
+			<li>
+				<label for="homeAlmofada" class="hide">Almofada</label>
+				<label for="homeCapaSofa" class="hide">Capa de Sofá</label>
+				<label for="homeCobreLeito" class="hide">Cobre Leito</label>
+				<label for="homeCortina" class="hide">Cortina</label>
+				<label for="homeEstofado" class="hide">Estofado</label>
+				<label for="homeLencol" class="hide">Lençol</label>
+				<label for="homeToalhaMesa" class="hide">Toalha de Mesa</label>
+				<label for="homeOutros" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Base para Estamparia</p>
+			<li>
+				<label for="baseEstampariaBranco" class="hide">Branco</label>
+				<label for="baseEstampariaOffWhite" class="hide">Off White</label>
+				<label for="baseEstampariaPFD" class="hide">PFD (Pronto para Estampar)</label>
+				<label for="baseEstampariaOutros" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Moda Íntima</p>
+			<li>
+				<label for="modaIntimaCamisola" class="hide">Camisola</label>
+				<label for="modaIntimaPegnoirRobe" class="hide">Pegnoir/Robe</label>
+				<label for="modaIntimaPijama" class="hide">Pijama</label>
+				<label for="modaIntimaUnderwearFeminino" class="hide">Underwear Feminino</label>
+				<label for="modaIntimaMasculino" class="hide">Underwear Masculino</label>
+				<label for="modaIntimaOutros" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Setor Calçadista</p>
+			<li>
+				<label id="setorCalcadista" class="hide"></label>
+			</li>
+        </ul>
+        <ul class="form hide">
+			<p class="subtitle">Outra Finalidade</p>
+			<li>
+				<label id="outraFinalidade" class="hide"></label>
+			</li>
+        </ul>
+	</div>
+	<div class="l-bottom prazo_preco_qnt writter_container" name="prazoPrecoQuantidade">
+		<h2 class="title">Prazo, Preço e Quantidade</h2>
+		<p class="subtitle">Quantidade estimada pelo cliente:</p>
+		<p id="totalAmount" class="answer"></p>
+        <p class="subtitle">Quantidade por cor:</p>
+		<aside class="answer">
+			<dl>
+				<dt id="colors"><strong>Nome/código por cor</strong></dt>
+			</dl>
+			<dl>
+				<dt id="colorAmount"><strong>Quantidade</strong></dt>
+			</dl>
+			<dl>
+				<dt id="colorType"><strong>Ref. Cor</strong></dt>
+			</dl>
+		</aside>
+		<p class="subtitle">Preço desejado pelo cliente:</p>
+		<aside class="answer">
+			<dl>
+				<dt><strong>Preço</strong></dt>
+				<dd id="price"></dd>
+			</dl>
+			<dl>
+				<dt><strong>Prazo Médio de Pagamento (Dias)</strong></dt>
+				<dd id="width2"></dd>
+			</dl>
+		</aside>
+		<p class="subtitle">Entrega da Produção tem data limite?</p>
+		<aside class="answer">
+			<p id="limitedDate"></p>
+			<em id="limitedDateValue"><strong class="limitedDate">Data Limite Desejada Pelo Cliente</strong></em>
+		</aside>
+		<p class="subtitle">Cliente necessita de corte 5m da produção?</p>
+		<aside class="answer">
+			<p id="hasCut"></p>
+			<em id="hasCutDate"><strong class="limitedDate">Data Limite Desejada Pelo Cliente</strong></em>
+		</aside>
+		<p class="subtitle">Cliente necessita de 1 peça de tecido para mostruário?</p>
+		<aside class="answer">
+			<p id="needShowcase"></p>
+			<em id="needShowcaseDate"><strong class="limitedDate">Data Limite Desejada Pelo Cliente</strong></em>
+		</aside>
+		<p class="subtitle">Cliente exige exclusividade por um período?</p>
+		<aside class="answer">
+			<p id="requiresExclusivity"></p>
+			<em id="requiresExclusivityDate"><strong class="limitedDate">Data Limite Desejada Pelo Cliente</strong></em>
+		</aside>
+		<p class="subtitle">Meio de Transporte:</p>
+		<p id="exportBy" class="answer"></p>
+	</div>
+	<div class="l-bottom similaridade writter_container" name="Similaridade">
+		<h2 class="title">Similaridade</h2>
+		<p class="subtitle">Algum concorrente produz tecido similar ao solicitado?</p>
+		<p class="answer competitor"></p>
+		<div class="competitorYes hide">
+			<p class="subtitle">Concorrente e dados do artigo na concorrência:</p>
+			<aside class="answer array_writter" data-pos="0">
+				<dl>
+					<dt><strong>Nome do concorrente</strong></dt>
+					<dd class="array_item" data-index="0"></dd>
+				</dl>
+				<dl>
+					<dt><strong>Artigo</strong></dt>
+					<dd class="array_item" data-index="1"></dd>
+				</dl>
+				<dl>
+					<dt><strong>Código</strong></dt>
+					<dd class="array_item" data-index="2"></dd>
+				</dl>
+				<dl>
+					<dt><strong>Largura</strong></dt>
+					<dd class="array_item" data-index="3"></dd>
+				</dl>
+				<dl>
+					<dt><strong>Gramatura</strong></dt>
+					<dd><span class="array_item" data-index="4"></span>
+				</dl>
+				<dl>
+					<dt><strong>Rendimento</strong></dt>
+					<dd class="array_item" data-index="5"></dd>
+				</dl>
+			</aside>
+			<p class="subtitle">Condições comerciais praticadas pelo concorrente:</p>
+			<aside class="answer">
+				<dl class="array_writter" data-obj="Dados" data-pos="0">
+					<dt><strong>Preço</strong></dt>
+					<dd class="array_item" data-index="6"></dd>
+				</dl>
+				<dl class="array_writter" data-obj="Dados" data-pos="1">
+					<dt><strong>Tecido</strong></dt>
+					<dd><span class="array_item" data-index="0"></span><span class="array_item" data-index="1"></span><span class="array_item" data-index="2"></span><span class="array_item" data-index="3"></span></dd>
+				</dl>
+				<dl class="array_writter" data-obj="Dados" data-pos="0">
+					<dt><strong>Prazo Médio de Pagamento (Dias)</strong></dt>
+					<dd class="array_item" data-index="7"></dd>
+				</dl>
+				<dl class="array_writter" data-obj="Dados" data-pos="0">
+					<dt><strong>ICMS</strong></dt>
+					<dd class="array_item" data-index="8"></dd>
+				</dl>
+			</aside>
+			<p class="subtitle">Há variação de preço por cor?</p>
+			<p class="answer priceVariation"></p>
+	        <ul class="form inline">
+	        	<li class="priceVariation">
+	               <label for="yes-item-1" class="hide">PT/PFD</label>
+	               <label for="yes-item-2" class="hide">Clara</label>
+	               <label for="yes-item-3" class="hide">Média</label>
+	               <label for="yes-item-4" class="hide">Escura</label>
+	               <label for="yes-item-5" class="hide">Especial</label>
+	           </li>
+	        </ul>
+	    </div>
+	</div>
+</div>

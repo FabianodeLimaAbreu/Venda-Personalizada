@@ -1,0 +1,47 @@
+<form class="financeiro" name="GERENTE FINANCEIRO/CRÉDITO" data-ref="Financeiro_Credito">
+  <fieldset>
+    <legend class="left-320">Financeiro</legend>  
+    <div class="content">
+      <a class="btn right close" href="javascript:void(0);"><i class="fa fa-close" aria-hidden="true"></i>Fechar</a>
+      <span class="little-break">&nbsp;</span>
+      <div class="l-bottom">
+        <h3 class="t-center">Avaliação Departamento Financeiro Crédito</h3>
+        <p id="evaluationDate" class="right"></p>
+        <p class="title cre"><b>*</b> Solicitação foi considerada pelo Financeiro/Crédito:</p>
+        <ul class="inline question_form" id="cre">
+          <li>
+           <div class="radio">
+             <input id="feedbackYes" type="radio" name="feedback" value="Yes" data-code="1"/>
+             <label for="feedbackYes">Aprovada</label>
+           </div>
+          </li>
+          <li>
+           <div class="radio">
+             <input id="feedbackRest" type="radio" name="feedback" value="No" data-code="2"/>
+             <label for="feedbackRest">Aprovada com Restrições</label>
+           </div>
+          </li>
+          <li>
+           <div class="radio">
+             <input id="feedbackNo" type="radio" name="feedback" value="No" data-code="3"/>
+             <label for="feedbackNo">Reprovada</label>
+           </div>
+          </li>
+          <li class="block">
+             <label for="Coments">Comentários</label>            
+             <textarea></textarea>
+             <input type="button" value="Salvar" class="save_button"/>
+          </li>
+        </ul>
+      </div>
+      <ul class="legends">
+        <li> ** Status da Solicitação: </li>
+        <li><span class="fa fa-check success" aria-hidden="true"></span> Aprovada</li>
+        <li><span class="fa fa-check warning" aria-hidden="true"></span> Aprovada com restrição</li>
+        <li><span class="fa fa-times error" aria-hidden="true"></span> Reprovada</li>
+        <li><span class="fa fa-check aware" aria-hidden="true"></span> Ciente/Avaliada</li>
+        <li><span class="fa fa-check waiting" aria-hidden="true"></span> Pendente</li>
+      </ul>
+    </div>
+  </fieldset>
+</form>

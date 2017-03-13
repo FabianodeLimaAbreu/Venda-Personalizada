@@ -1,0 +1,100 @@
+<form class="comercial" name="GERENTE DE PRODUTO - PROJETOS ESPECIAIS" data-ref="Projetos_Especiais">
+  <fieldset>
+    <legend class="left-320">Produto</legend>  
+    <div class="content">
+      <a class="btn right close" href="javascript:void(0);"><i class="fa fa-close" aria-hidden="true"></i>Fechar</a>
+      <span class="little-break">&nbsp;</span>
+      <div class="l-bottom">
+        <h3 class="t-center">Avaliação Departamento de Produto</h3>
+        <p id="evaluationDate" class="right"></p>
+        <p class="title gp"><b>*</b> Solicitação foi considerada pela Gerência de Projetos Especiais:</p>
+        <ul class="inline question_form" id="gp">
+          <li>
+           <div class="radio">
+             <input id="feedbackYes" type="radio" name="feedback" value="Yes" data-code="1"/>
+             <label for="feedbackYes">Aprovada</label>
+           </div>
+          </li>
+          <li>
+           <div class="radio">
+             <input id="feedbackRest" type="radio" name="feedback" value="No" data-code="2"/>
+             <label for="feedbackRest">Aprovada com Restrições</label>
+           </div>
+          </li>
+          <li>
+           <div class="radio">
+             <input id="feedbackNo" type="radio" name="feedback" value="No" data-code="3"/>
+             <label for="feedbackNo">Reprovada</label>
+           </div>
+          </li>
+          <li class="block">
+             <label for="Coments">Comentários</label>            
+             <textarea></textarea>
+          </li>
+          <div class="newBase hide">
+            <p id="baseTitle" class="title"><b>*</b></p>
+            <li class="commercialConditions">
+              <div class="w-150">
+                <label for="itemCode"><p class="cus"><b>*</b> Código do artigo</p></label>
+                <input id="itemCode" type="text" value="" />
+              </div>
+            </li>
+            <li class="w-335">
+              <label><p class="Q-total"><b>*</b> Nome do artigo</p></label>
+              <input id="itemName" type="text" value="" />
+            </li>
+            <li>
+              <div class="radio">
+                <input id="tinto" type="radio" name="colorRadio" value="Código / Nome Provisório" disabled />
+                <label for="tinto">Nome Provisório</label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <input id="tinto" type="radio" name="colorRadio" value="Código / Nome Cadastrado" disabled />
+                <label for="tinto">Nome Cadastrado</label>
+              </div>
+            </li>
+          </div>
+          <div class="existBase hide">
+            <li class="commercialConditions">
+              <div class="w-335">
+                <label for="itemCodeExist"><p class="cus"><b>*</b> Base Existente</p></label>
+                <input id="itemCodeExist" type="text" value="" disabled />
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <input id="tinto" type="radio" name="colorRadio" value="Cor Nova" disabled />
+                <label for="tinto">Cor Nova</label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <input id="estampado" type="radio" name="colorRadio" value="Estampa Nova" disabled />
+                <label for="estampado">Estampa Nova</label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <input id="fio_tinto" type="radio" name="colorRadio" value="Padronagem Nova (Fio Tinto)" disabled />
+                <label for="fio_tinto">Padronagem Nova (Fio Tinto)</label>
+              </div>
+            </li>
+          </div>
+          <li class="block">
+            <input class="no-margin save_button" type="button" value="Salvar"/>
+          </li>
+        </ul>
+      </div>
+      <ul class="legends">
+        <li> ** Status da Solicitação: </li>
+        <li><span class="fa fa-check success" aria-hidden="true"></span> Aprovada</li>
+        <li><span class="fa fa-check warning" aria-hidden="true"></span> Aprovada com restrição</li>
+        <li><span class="fa fa-times error" aria-hidden="true"></span> Reprovada</li>
+        <li><span class="fa fa-check aware" aria-hidden="true"></span> Ciente/Avaliada</li>
+        <li><span class="fa fa-check waiting" aria-hidden="true"></span> Pendente</li>
+      </ul>
+    </div>
+  </fieldset>
+</form>

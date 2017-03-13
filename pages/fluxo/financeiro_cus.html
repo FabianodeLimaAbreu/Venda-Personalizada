@@ -1,0 +1,83 @@
+<form class="financeiro" name="GERENTE FINANCEIRO/CUSTOS" data-ref="Financeiro_Custos">
+  <fieldset>
+    <legend class="left-320">Financeiro</legend>  
+    <div class="content">
+      <a class="btn right close" href="javascript:void(0);"><i class="fa fa-close" aria-hidden="true"></i>Fechar</a>
+      <span class="little-break">&nbsp;</span>
+      <div class="l-bottom">
+        <h3 class="t-center">Avaliação Departamento Financeiro Custos</h3>
+        <p id="evaluationDate" class="right "></p>
+        <ul id="cus">
+          <li class="block">
+            <div class="w-450">
+              <label><p class="sel"><b>*</b> Categoria</p></label>
+              <select class="category">
+                <option value=""></option>
+                <option value="PREM">PREM</option>
+                <option value="AUTH">AUTH</option>
+                <option value="STD1">STD1</option>
+                <option value="STD2">STD2</option>
+              </select>
+            </div>
+          </li>
+          <li class="commercialConditions">
+            <div class="w-300 inline">
+              <label for="itemPrice"><p class="cus"><b>*</b> Preço do artigo (Tabela Cheia 90 dias)</p></label>
+              <input id="itemPrice" type="text" value="" />
+            </div>
+            <ul class="w-170 inline">
+              <li>
+                <div class="radio">
+                  <input id="currencyReal" type="radio" name="currency" value="real" />
+                  <label for="currencyReal">R$</label>
+                </div>
+              </li>
+              <li>
+                <div class="radio">
+                  <input id="currencyDolar" type="radio" name="currency" value="dolar" />
+                  <label for="currencyDolar">US$</label>
+                </div>
+              </li>
+            </ul>
+            <ul class="w-220 inline ">
+              <li>
+                <div class="radio">
+                  <input id="byMetros" type="radio" name="averageTerm" value="Metros" />
+                  <label for="byMetros">Metro</label>
+                </div>
+              </li>
+              <li>
+                <div class="radio">
+                  <input id="byKilos" type="radio" name="averageTerm" value="Quilos" />
+                  <label for="byKilos">Quilo</label>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="w-450 block Q-total">
+            <label><p class="Q-total"><b>*</b> Quantidade total considerada</p></label>
+            <input id="totalAmount" type="text" value="" />
+          </li>
+          <li class="w-450 block">
+            <label>Valor total da solicitação</label>
+            <input id="totalValue" type="text" value="" disabled="disabled" />
+          </li>
+          <li class="question_form block">
+             <label for="Coments">Comentários</label>            
+             <textarea></textarea>
+             <input type="checkbox" class="hide" data-code="4" checked>
+             <input type="button" value="Salvar" class="save_button"/>
+          </li>
+        </ul>
+      </div>
+      <ul class="legends">
+        <li> ** Status da Solicitação: </li>
+        <li><span class="fa fa-check success" aria-hidden="true"></span> Aprovada</li>
+        <li><span class="fa fa-check warning" aria-hidden="true"></span> Aprovada com restrição</li>
+        <li><span class="fa fa-times error" aria-hidden="true"></span> Reprovada</li>
+        <li><span class="fa fa-check aware" aria-hidden="true"></span> Ciente/Avaliada</li>
+        <li><span class="fa fa-check waiting" aria-hidden="true"></span> Pendente</li>
+      </ul>
+    </div>
+  </fieldset>
+</form>
