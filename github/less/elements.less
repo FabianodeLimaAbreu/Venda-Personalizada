@@ -1,0 +1,179 @@
+.fleft{
+  position: relative;
+  float: left;
+  clear: none;
+  display: block;
+}
+.gradient(@from: #FFF, @to: #ECECEC) {
+  background: @from;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1, @from), color-stop(0, @to));
+  background: -ms-linear-gradient(bottom, @from, @to); 
+  background: -moz-linear-gradient(center top, @from 0%, @to 100%);
+  background: -o-linear-gradient(@to,@from);  
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@from,@to));  
+}
+.radius(@radius: 3px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.radius-bottom(@radius: 3px){
+  -webkit-border-bottom-left-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  -moz-border-radius-bottomleft: @radius;
+  -moz-border-radius-bottomright: @radius;
+  border-bottom-left-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+.border(@color) {
+  border-top: solid 1px @color;
+  border-left: solid 1px @color;
+  border-right: solid 1px @color;
+  border-bottom: solid 1px @color;
+}
+.rotate(@deg: 3deg){
+  transform: rotate(@deg);
+  -ms-transform: rotate(@deg); /* IE 9 */
+  -webkit-transform: rotate(@deg); /* Safari and Chrome */
+  -o-transform: rotate(@deg); /* Opera */
+  -moz-transform: rotate(@deg); /* Firefox */  
+}
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+// Transitions Fade
+// .transition(@time: 0.2s){
+//   -webkit-transition:all @time;
+//   -moz-transition:all @time;
+//   -o-transition:all @time;
+//   -ms-transition:all @time;
+//   transition:all @time;
+// }
+// Transitions Fade
+.transition(@param:all, @time: 0.2s, @ease:linear){
+  -webkit-transition:@param @time @ease;
+  -moz-transition:@param @time @ease;
+  -o-transition:@param @time @ease;
+  -ms-transition:@param @time @ease;
+  transition:@param @time @ease;
+}
+// Responsive image
+//
+// Keep images from scaling beyond the width of their parents.
+.cover{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.img-responsive(@display: block;) {
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+.scale(@scale){
+  -webkit-transform: scale(@scale);
+  -moz-transform: scale(@scale);
+  -o-transform: scale(@scale);
+  -ms-transform: scale(@scale);
+  transform: scale(@scale);  
+}
+.center(@width, @height){
+  top:50%;
+  left:50%;
+  margin-left:-@width/2-50px;
+  margin-top:-@height/2;
+  
+}
+.circle{
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  behavior: url(pie/PIE.htc); // IE8
+}
+.radial-gradient(@from, @to){
+  background-image: -moz-radial-gradient(50% 100%, circle cover, @from, @to 60%); 
+  background-image: -webkit-radial-gradient(50% 100%, circle cover, @from, @to 60%);
+  background-image: -o-radial-gradient(50% 100%, circle cover, @from, @to 60%);
+  background-image: -ms-radial-gradient(50% 100%, circle cover, @from, @to 60%);
+  background-image: radial-gradient(50% 100%, circle cover, @from, @to 60%);
+}
+// Remove text selection
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+// Reset Button
+.button{
+  //background: none;
+  border: none;
+  margin: 0;
+  padding: 0;    
+  cursor: pointer;
+}
+// widths and heights of elements include the padding and border
+.box-sizing{
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+// Box Shadow
+.box-shadow(@from: #EEE, @to: #FFF) {
+  -webkit-box-shadow: 0 0 2px @from, 0 1px 0 @to;
+     -moz-box-shadow: 0 0 2px @from, 0 1px 0 @to;
+          box-shadow: 0 0 2px @from, 0 1px 0 @to;
+}
+.shadow-top(){
+  -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.2);
+      box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.2);  
+}
+
+
+
+
+// Gradient with image
+.gradient-image(@startColor: #555, @endColor: #333, @image) {
+  background-color: mix(@startColor, @endColor, 60%); // fallback
+  background-image: @image; // fallback
+  background: @image, -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+  background: @image, -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+  background: @image, -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background: @image, -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+  background: @image, linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+}
+
+// Scale image
+.scale(@scale){
+  -webkit-transform: scale(@scale);
+  -moz-transform: scale(@scale);
+  -o-transform: scale(@scale);
+  -ms-transform: scale(@scale);
+  transform: scale(@scale);  
+}
+// Saturation
+.grayscale(@percent:100%){
+  filter: grayscale(@percent);
+  -webkit-filter: grayscale(@percent); /* For Webkit browsers */
+  filter: gray; /* For IE 6 - 9 */
+  -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */ 
+}
+.rotate(@deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
+}

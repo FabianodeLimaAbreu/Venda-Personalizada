@@ -1,0 +1,153 @@
+<div class="vpResume validacao">
+	<a class="btn prev left" href="#validacao"><span><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i></span>Voltar</a>
+	<span class="little-break">&nbsp;</span>
+	<h2 class="t-center"><p>Resumo da Solicitação</p></h2>
+	<div class="form">
+        <div class="table_min no_latbars">
+          <dl class="w-12_5 first">
+            <dt>Proposta VP Nº</dt>
+            <dd id="clientVpNumber" data-required="required"></dd>
+          </dl>
+          <dl class="w-10">
+            <dt>Cód. Cliente</dt>
+            <dd id="clientCode" data-required="required"></dd>
+          </dl>
+          <dl class="w-25">
+            <dt>Nome Cliente</dt>
+            <dd id="clientName" data-required="required"></dd>
+          </dl>
+          <dl class="w-12_5">
+            <dt>Contato</dt>
+            <dd id="contact" data-required="required"></dd>
+          </dl>
+          <dl class="w-12_5">
+            <dt>Telefone</dt>
+            <dd id="phone" data-required="required"></dd>
+          </dl>
+          <dl class="w-17">
+            <dt>Email</dt>
+            <dd id="email" data-required="required"></dd>
+          </dl>
+          <dl class="w-10 last">
+            <dt>Data</dt>
+            <dd id="clientDate" data-required="required"></dd>
+          </dl>
+        </div
+	</div>
+	<div class="l-bottom">
+		<p class="title">A Solicitação de Venda Personalizada foi considerada:</p>
+        <ul class="form consideredActions">
+          <li class="odd">
+            <div class="radio">
+              <input id="considered-item-1" type="radio" name="considered" value="1" />
+              <label for="considered-item-1">Viável</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <input id="considered-item-2" type="radio" name="considered" value="2" />
+              <label for="considered-item-2">Viável com restrição</label>
+            </div>
+          </li>
+          <li class="odd">
+            <div class="radio">
+              <input id="considered-item-3" type="radio" name="considered" value="3" />
+              <label for="considered-item-3">Inviável</label>
+            </div>
+          </li>
+        </ul>
+	</div>
+	<div class="l-bottom hide practicable">
+		<p class="title">1 - Para que esta Solicitação se torne viável é necessária a seguinte alteração:</p>
+        <ul class="form">
+        	<li class="w-880"><textarea id="viableWithRestriction" rows="4"></textarea></li>
+        </ul>
+	</div>
+	<div class="l-bottom hide impracticable">
+		<p class="title">2 - Esta Solicitação é inviável pelos seguintes motivos:</p>
+        <ul class="form">
+        	<li class="w-880"><textarea id="unviable" rows="4"></textarea></li>
+        </ul>
+	</div>
+	<div class="conditions">
+		<p class="title">Com as seguintes condições:<br><br></p>
+		<p class="subtitle">Entrega da Produção tem data limite?</p>
+		<aside class="answer date">
+			<p id="limitedDate" data-required="required"></p>
+			<em id="limitedDateValue" class="hide" name="date1"><strong>Data limite desejada pelo cliente</strong></em>
+			<em class="right hide" name="date1"><strong>Data prevista pela Focus</strong><input id="limitedDateFocus" type="text"/ name="dateFocus"></em>
+		</aside>
+		<p class="subtitle">Cliente necessita de corte 5m da produção?</p>
+		<aside class="answer date">
+			<p id="hasCut" data-required="required"></p>
+			<em id="hasCutValue" class="hide" name="date2"><strong>Data limite desejada pelo cliente</strong></em>
+			<em class="right hide" name="date2"><strong>Data prevista pela Focus</strong><input id="hasCutFocus" type="text"/ name="dateFocus"></em>
+		</aside>
+		<p class="subtitle">Cliente necessita de 1 peça de tecido para mostruário?</p>
+		<aside class="answer date">
+			<p id="needShowcase" data-required="required"></p>
+			<em id="needShowcaseValue" class="hide" name="date3"><strong>Data limite desejada pelo cliente</strong></em>
+			<em class="right hide" name="date3"><strong>Data prevista pela Focus</strong><input id="needShowcaseFocus" type="text"/ name="dateFocus"></em>
+		</aside>
+		<aside>
+			<em class="w-220">
+				<strong>Código do artigo</strong>
+				<input id="itemCode" type="text" data-required="required" disabled>
+			</em>
+			<em class="w-300">
+				<strong>Nome do artigo</strong>
+				<input id="itemName" type="text" data-required="required" disabled>
+			</em>
+		</aside>
+		<p class="subtitle">Preço do artigo (Tabela 90 Dias):</p>
+		<p class="answer"><strong id="price">Preço: </strong><br><strong id="width">Prazo de pagamento desejado pelo cliente (Dias): </strong><br><strong>Prazo de pagamento Focus (Dias): </strong>90 dd<br><strong id="signal" class="hide">Adiantamento: </strong></p>
+		<p class="subtitle">Meio de Transporte:</p>
+		<p id="exportBy" class="answer" data-required="required"></p> 
+		<p class="subtitle">Cliente exige exclusividade por um período?</p>
+		<aside class="answer">
+			<p id="requiresExclusivityDate" data-required="required"></p>
+			<em id="requiresExclusivityDateValue" class="hide" name="date4"><strong>Data limite desejada pelo cliente</strong></em>
+			<em class="right hide" name="date4"><strong>Data prevista pela Focus</strong><input id="requiresExclusivityDateFocus" type="text"/ name="dateFocus"></em>
+		</aside>
+		<p class="subtitle">Quantidade total: </p>
+		<p id="totalAmount" class="answer"></p>
+
+		<aside class="answer colors">
+			<dl>
+				<dt id="colorName"><strong>Nome/código da cor</strong></dt>
+			</dl>
+			<dl>
+				<dt id="colorAmount"><strong>Quantidade</strong></dt>
+			</dl>
+			<dl class="last">
+				<dt id="colorType"><strong>Ref. Cor</strong></dt>
+			</dl>
+		</aside>
+		<p class="subtitle">Este produto segue o Critério de Qualidade Focus</p>
+		<div class="w-450 checkbox answer">
+				<input id="qualityJeans" type="checkbox" name="quality" val="Jeans" />
+				<label for="qualityJeans">Jeans</label>
+				<input id="qualityWorkwear" type="checkbox" name="quality" val="Workwear" />
+				<label for="qualityWorkwear">Workwear</label>
+				<input id="qualityModa" type="checkbox" name="quality" val="Moda" />
+				<label for="qualityModa">Moda</label>
+				<input id="qualityHome" type="checkbox" name="quality" val="Home" />
+				<label for="qualityHome">Home</label>
+				<input id="qualityOtherBox" type="checkbox" name="quality" val="Outro" />
+				<label for="qualityOtherBox">Outro</label>
+            	<input id="qualityOther" type="text" name="quality" placeholder="Especificar" val="" disabled />
+        </div>
+		<p class="subtitle">Observações:</p>
+		<textarea id="comment" class="answer"></textarea>
+		<div class="hide">
+			<p id="commercialManager" class="view" data-required="required"></p><br>
+			<p id="contact2" class="view" data-required="required"></p><br>
+			<p id="phone2" class="view" data-required="required"></p><br>
+			<p id="email2" class="view" data-required="required"></p><br>
+		</div>
+		<div class="btnsActions">
+			<a class="btn save hide" href="javascript:void(0);">Salvar Dados</a>
+			<a class="btn submit hide" href="javascript:void(0);">Gravar e Enviar Email Para Representante</a>
+		</div>
+	</div>
+</div>

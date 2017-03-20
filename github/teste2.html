@@ -1,0 +1,444 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="http://institucionalteste/vp_personalizada/css/font-awesome.min.css">
+      <style type="text/css">
+        @charset "utf-8";
+        /* GERAL */
+        body,
+        html,
+        div,
+        span,
+        a,
+        ul,
+        li,
+        dl,
+        dt,
+        dd,
+        section,
+        header,
+        p,
+        form,
+        fieldset,
+        button,
+        input {
+          border: none;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          position: relative;
+          text-decoration: none;
+          outline: none;
+        }
+        header,
+        section,
+        footer,
+        aside,
+        nav,
+        main,
+        article,
+        figure,
+        a,
+        span,
+        :after,
+        :before {
+          display: block;
+        }
+        body * {
+          outline: none;
+          border: 0;
+        }
+        html object {
+          display: none;
+        }
+        /**/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+        }
+        strong {
+          font-weight: 700;
+          display: block;
+          font-size: 0.9375rem;
+          color: #535658;
+        }
+        /* Variables */
+        /* Mixins and Functions */
+        /*******************************
+
+                    GLOBAL
+        *******************************/
+        .hide,
+        main nav > ul > li > ul,
+        main nav > ul > li.active > ul.disabled,
+        main form fieldset legend,
+        main .form fieldset legend {
+          display: none !important;
+          opacity: 0;
+          height: 0;
+        }
+        .w-500 {
+          width: 500px !important;
+        }
+        .left {
+          float: left;
+        }
+        .right {
+          left: 450px;
+          top: -62px;
+        }
+        textarea {
+          text-align: left;
+          color: #535659;
+          font-size: 0.93em;
+          font-weight: 400;
+          padding: 10px;
+          margin: 6px 0 5px;
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 100%;
+        }
+        body {
+          overflow-x: hidden;
+          overflow-y: auto;
+          width: 90%;
+          font: normal 100% 'Arial', sans-serif;
+          margin-left: 5%;
+          font-size: 18px;
+        }
+        .bottom {
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 60px;
+        }
+        .bottom img {
+          margin: 10px;
+        }
+        .bottom .btn {
+          text-align: center;
+          font-size: 0.93em;
+          font-weight: 700;
+          border: 1px solid #3374b5;
+          background: #287bca;
+          letter-spacing: -0.07em;
+          padding: 0 1em;
+          height: 38px;
+          cursor: pointer;
+          z-index: 99;
+          margin: 10px 10px 7px 0;
+          color: #fff;
+        }
+        .bottom .btn:before {
+          content: "";
+          height: 38px;
+          width: 0;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .bottom .btn span {
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .container {
+          position: relative;
+          float: left;
+          width: 100%;
+          height: auto;
+        }
+
+        /* TABLE */
+        table {
+          width: 100%;
+          font-size: 0.79em;
+          font-weight: 700;
+          position: relative;
+          float: left;
+          height: auto;
+        }
+        table,
+        th,
+        td {
+          border-collapse: collapse;
+        }
+        th,
+        td {
+          padding: 5px;
+          text-align: left;
+        }
+        table th {
+          height: 35px;
+          color: white;
+        }
+        tr.head th{
+          background-color: #a3acb5;
+        }
+        table td {
+          height: 25px;
+          word-wrap: break-word;
+          }
+        tr.head td{
+          border-top: 2px solid #e7e7e8;
+          border-bottom: 2px solid #e7e7e8;
+        }
+        tr.l-bottom{
+          border-bottom: 2px solid #ced4d9; 
+        }
+        .title {
+          line-height: 1.250em;
+          text-align: left;
+          font-size: 1.250em;
+          font-weight: 700;
+        }
+        .subtitle{
+          line-height: 1.125em;
+          text-align: left;
+          font-size: 1.125em;
+          font-weight: 700;
+        }
+        .view {
+          text-align: left;
+          color: #535659;
+          font-size: 0.9375em;
+          line-height: 0.937em;
+          padding-left: 10px;
+        }
+
+        .view li{
+          height: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <br>
+        <p class="view">Prezado Cliente,</p><br>
+        <p class="view">É com satisfação que recebemos a sua solicitação.</p>
+        <p class="view">A seguir  apresentamos a nossa proposta para desenvolvimento do artigo solicitado.</p><br>
+      </div>
+      <div class="container">
+        <table>
+          <tr class="head">
+            <th>Proposta VP Nº</th>
+            <th>Cód. Cliente</th> 
+            <th>Nome Cliente</th>
+            <th>Contato</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Data</th>
+          </tr>
+          <tr class="head">
+            <td id="clientVpNumber" class="view">20161215407</td>
+            <td id="clientCode" class="view">1382748200</td> 
+            <td id="clientName" class="view">LOJAS RENNER S/A</td>
+            <td id="contact" class="view">AAAAAA</td>
+            <td id="phone" class="view">12345678</td>
+            <td id="email" class="view">safasf@asjgjaig.com</td>
+            <td id="clientDate" class="view">15/12/2016</td>
+          </tr>
+          <tr>
+            <td colspan="5"><p class="title">A Solicitação de Venda Personalizada foi considerada:</p></td>
+          </tr>
+          <tr class="l-bottom">
+            <td colspan="7">
+              <p class="view" id="Status">Inviável</p>
+            </td>
+          </tr>
+          <!--
+            Se #considered-item-2, tira o hide de div.practicable
+            Se #considered-item-3, tira o hide de div.impracticable
+          -->
+          <tr>
+            <td colspan="5">
+              <p class="title">Para que esta Solicitação se torne viável é necessária a seguinte alteração:</p>
+            </td>
+          </tr>
+          <tr class="l-bottom">
+            <td colspan="7">
+              <p class="view" id="viableWithRestriction">Lorem ipsum , Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="title">Esta Solicitação é inviável pelos seguintes motivos:</p>
+            </td>
+          </tr>
+          <tr class="l-bottom">
+            <td colspan="7">
+              <p class="view" id="unviable">Lorem ipsum , Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="subtitle">Com as seguintes condições:<br><br></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><p class="subtitle">Entrega da Produção tem data limite?</p></td>
+            <td colspan="1"><p class="subtitle">Data limite desejada pelo cliente</p></td>
+            <td colspan="2"><p class="subtitle">Data prevista pela Focus</p></td>
+          </tr>
+          <tr>
+            <td colspan="2"><p id="limitedDate" class="view">Não</p></td>
+            <td colspan="1"><p id="limitedDateValue" class="view">x</p></td>
+            <td colspan="2"><p id="limitedDateFocus" class="view">x</p></td>
+          </tr>
+          <tr>
+            <td colspan="2"><p class="subtitle">Cliente necessita de corte 5m da produção?</p></td>
+            <td colspan="1"><p class="subtitle">Data limite desejada pelo cliente</p></td>
+            <td colspan="2"><p class="subtitle">Data prevista pela Focus</p></td>
+          </tr>
+          <tr>
+            <td colspan="2"><p id="hasCut" class="view">Não</p></td>
+            <td colspan="1"><p id="hasCutValue" class="view">x</p></td>
+            <td colspan="2"><p id="hasCutFocus" class="view">x</p></td>
+          </tr>
+          <tr>
+            <td colspan="2"><p class="subtitle">Cliente necessita de 1 peça de tecido para mostruário?</p></td>
+            <td colspan="1"><p class="subtitle">Data limite desejada pelo cliente</p></td>
+            <td colspan="2"><p class="subtitle">Data prevista pela Focus</p></td>
+          </tr>
+          <tr>
+            <td colspan="2"><p id="needShowcase" class="view">Não</p></td>
+            <td colspan="1"><p id="needShowcaseValue" class="view">x</p></td>
+            <td colspan="2"><p id="needShowcaseFocus" class="view">x</p></td>
+          </tr>
+          <tr>
+            <td colspan="0"><p class="subtitle">Código do Artigo</p></td>
+            <td colspan="0"><p class="subtitle">Nome do Artigo</p></td>
+          </tr>
+          <tr>
+            <td colspan="0"><p id="limitedDate" class="view">xxxxxxxxxxxxx</p></td>
+            <td colspan="0"><p id="limitedDateValue" class="view">xxxxxxxxxx</p></td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="subtitle">Preço do artigo (Tabela 90 Dias):</p><br/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="answer two"><strong>Preço: <span id="price">US$2,50 / Metro<span></strong><br><strong>Prazo Médio de Pagamento (Dias): <span id="deadline">150</span></strong></p>
+              <br><strong>Prazo de pagamento Focus (Dias): <span class="paymentday">90 dd</span></strong><br><strong id="signal">Adiantamento: </strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="subtitle">Meio de Transporte:</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p id="exportBy" class="view">Marítimo</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p class="subtitle">Cliente exige exclusividade por um período?</p>
+            </td>
+            <td colspan="1">
+              <p class="subtitle">Data limite desejada pelo cliente</p>      
+            </td>
+            <td colspan="2">
+              <p class="subtitle">Data prevista pela Focus</p>     
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p id="requiresExclusivityDate" class="view">Sim / Cor</p>
+            </td>
+            <td colspan="1">
+              <p id="requiresExclusivityDateValue" class="view">31/12/2016</p>
+            </td>
+            <td colspan="2">
+              <p id="requiresExclusivityDateFocus" class="view">x</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5"><p class="subtitle">Quantidade Total:</p></td>
+          </tr>
+          <tr>
+            <td colspan="5"><p class="view">5.000</p></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p class="subtitle">Nome/ Código da Cor</p>
+            </td>
+            <td>
+              <p class="subtitle">Quantidade</p>
+            </td>
+            <td>
+              <p class="subtitle">Ref.Cor</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul class="view" id="colorName">
+                <li><p>Azul Piscina / 19-9999-Pantoner</p></li>
+                <li><p>Teste | Teste</p></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="view" id="colorAmount">
+                <li><p>5000</p></li>
+                <li><p>1000</p></li>
+              </ul>
+            </td>
+            <td colspan="2">
+              <ul class="view" id="colorType">
+                <li><p>Pantone | TC</p></li>
+                <li><p>Cor Focus</p></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="subtitle">Este produto segue o Critério de Qualidade Focus</p>
+            </tdb>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="view">Jeans, Workwear</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="subtitle">Observações:</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="view">Tyasfdugsa doihasid sa:</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="view">Colocamo-nos a disposição para quaisquer exclarecimentos.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <p class="view">Atenciosamente,</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bottom">
+        <br>
+        <p id="commercialManager" class="view">Nome do Gerente comercial</p><br>
+        <p id="phonesManager" class="view">11 9999-9999 / 11 99999-9999</p><br>
+        <p id="emailManager" class="view">teste@teste.com.br</p><br>
+        <img src="http://institucionalteste/vp_teste/images/logo-focus-textil.png" height="38" width="141"/>
+      </div>
+    </body>
+  </html>

@@ -1,0 +1,791 @@
+/*******************************
+
+            MEDIA QUERIES
+*******************************/
+@media (min-width: 1024px) {
+  .tutorial-pins{
+    display: block;
+  }
+}
+@media screen {
+  @media (max-width: 990px) {
+    main{
+      nav{
+        >p{ float: none; padding: 8px 0 16px; }
+        >ul{
+          position: absolute; top: -82px; left: 0; width:calc(~"100% - 2px"); z-index: 99;
+          >li{
+            opacity:0; width: 100%; text-align: center; display: none;
+            &.active{
+              &:before{
+                display: none;
+              }
+            }
+            &.m_menu{
+              opacity:1; display: block;
+              background: #0056a5;
+              width: 2.5em;
+              margin: 0 -2px 0 calc(~"100% - 2.42em");
+              font-size: 1.2em;
+              border: 0;
+              a{
+                color: #fff; 
+                &:before{ height:2.37em; }
+              }
+              &.active{
+                a{ padding: 17px 14px; } 
+              }
+            }
+            &.f_menu{
+              opacity: 1; display: block;
+            }
+            >a{
+              &:before{
+                height:2.97em;
+              }
+            }
+            >ul{
+              position: relative !important;
+              left: 0 !important;
+              >li{
+                border-bottom: 1px solid #ced4d9;
+                width: 50%;
+                margin:0 -1px 0 -2px !important;
+                &:after, &:before{
+                  display:none !important;
+                }
+                a{
+                  width: 90%;
+                }
+              }
+              >li:nth-child(even){
+                border-left: 1px solid #ced4d9;
+                margin: 0 -1px 0 -2px !important;
+              }
+            }
+          }
+        }
+      }
+      form{
+        margin: -10px 10px 49px;
+        width: calc(~"100% - 20px") !important;
+        fieldset{ 
+          legend{
+            .show;
+            .txt-sets(center,@dark-blue,1.1,700);
+            border-bottom: 1px solid @light-blue;
+          }
+          >.content{
+            padding-top: 10px;
+          }
+        }
+      }
+      form.base{
+        .content{
+          padding-top: 20px;
+        }
+      }
+      form.amostra{
+        .content{
+          padding: 10px 0;
+        }
+
+      }
+      form.finalidade_produto{
+        fieldset{
+          .l-bottom:not(.wholesaleSector):not(.anotherPurpose){
+            >ul{
+              li{
+                display: table-row;
+                height: 30px;
+              }
+              li.w-880{
+                width:100%;
+              }
+              li[class^='w-']{
+                position: relative !important;
+                display: block !important;
+                margin: 0 !important;
+                right: 0 !important;
+              }
+            }
+          }
+          .underwear, .top{
+            ul li{
+              margin-bottom: 10px !important;
+              &.w-210{
+                margin-top: -5px !important;
+              }
+            }
+          }
+          li{
+            width: 32% !important;
+          }
+        }
+      }
+      form.prazo_preco_quant{
+        .content{
+          >.l-bottom{
+            padding: 10px 0;
+          }
+          >p.title{
+            margin-left: 0;
+            margin-right: 0;
+          }
+          >ul.inline{
+            li:nth-child(4){
+              margin-left:466px;
+            }
+            div.checkbox{
+              margin:-10px -15px -13px 10px;
+            }
+          }
+          ul.codes li p{
+            /*width: calc(~"100% - 375px"); */
+          }
+        }
+      }
+      form.similaridade{
+        .content{
+          padding: 10px 0;
+          .l-bottom{
+            padding: 10px 0;
+            &:nth-child(3){
+              >:nth-child(2){
+                display:block;
+              }
+              >ul{
+                margin: 10px 0 20px;
+              }
+            }
+          }
+        }
+      }
+      form.segmentacao{
+        fieldset{
+          .content{
+            .l-both{
+              ul{
+                li{
+                  ul{
+                    margin: 10px;
+                    display: block;
+                    width: auto;
+                    li{
+                      width: auto !important;
+                      padding-bottom: 9.5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      /* Fluxo de Aprovação */
+      div.vpResume{
+        margin: 0; width: 100%;
+        a.btn.close{ margin: 0; top:0;  }
+        >h2{
+          display: block;
+          >p{
+            &:extend(main form fieldset legend);
+            padding: 0; text-transform: none; font-size: 1.1rem; display: inline-block !important;
+          }
+        }
+        .table_min{ margin:0 10px; }
+        .form{ width: auto; }
+        span.little-break{ margin-bottom: 0; }
+        &.validacao{
+          margin: 20px 10px;
+          width: calc(~"100% - 20px");          
+          div.conditions{
+            padding: 10px; margin: 10px 0;
+          }
+        }
+        ul.info li{
+          width: 32% !important;
+        }
+      }
+      form.comercial .content, form.financeiro .content, form.superintendencia .content{
+        .close{ margin:-10px; }
+        > div{ padding: 0; }
+      }
+      div.tables{
+        overflow-x: scroll;
+      }
+      div.table{
+        width: 1662px; height:auto;  margin:30px 10px 0;
+        >div{
+          width: 1667px;
+          >div{ 
+            position: static !important; left: initial !important; box-shadow: none;
+            &.tbl-container-01{ 
+              width: 790px;
+              div{
+                width: 787px;
+              }
+            }
+            &.tbl-container-02{ width: 877px; position: absolute !important; }
+            &.tbl-container-03{ width: 655px; }
+          }
+        }
+        &.tbl-2{
+          margin-top: 0px;
+        }
+      }
+      div.table_min{ margin: 0 auto; }
+      ul.legends{
+        width: auto; 
+        li{
+          margin-bottom: 8px; 
+        }
+      }
+      p.vp_info{ display: block; }
+      /* Validação da Proposta Focus */
+    }
+    &.login{
+      section{
+        width: 100% !important;
+        top: calc(0%) !important;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    main{ 
+      form.dados, form.inicial{
+        div[class^='w-']{
+          width: calc(~"50% - 8px") !important; 
+        }
+      }
+      form.segmentacao{
+        fieldset{
+          .content{
+            .l-both{
+              ul{
+                li{
+                  p{
+                    padding: 5px 29px 0;
+                    display: block;
+                    width: auto;
+                    line-height: auto;
+                  }
+                  >div{
+                    min-width: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      form.base, form.amostra{
+        div div[class^='w-']{
+          width: 100% !important;
+        }
+        .newBase{
+          > div:not(.l-bottom){ 
+            width:100%;
+          }
+        }
+      }
+      form.amostra{
+        .content{
+          .pantoneFields{
+            .addPantone{
+              left: 10px;
+              top: 5px;
+            }
+          }
+        }
+        .content div .inline{
+          padding: 10px;
+          li{
+            display: block;
+            padding: 5px 0;
+            &.pantone{
+              vertical-align: top;
+              margin-top: 0;
+            }
+            .w-300{
+              margin: 0;
+              width: calc(~"100% - 50px") !important; 
+            }
+          }
+          ul.codes li{ 
+            p{
+              width: calc(~"100% - 44px");
+            }
+            a{
+              right:14px;
+            }
+          }
+        }
+      }
+      form.finalidade_produto{
+        fieldset{
+          li{
+            width: 49% !important;
+            margin-bottom: 10px !important;
+          }
+        }
+      }
+      form.prazo_preco_quant{
+        .content{
+          ul.inline{
+            .w-210{
+              display: block;
+              margin: 6px 6px 0 0px !important;
+            }
+            &.amountByColor{
+              div.radio{
+                // width: 100px !important;
+              }
+              ul.codes{
+                a.ico-circle{
+                  top: 72px !important;
+                }
+              }
+              a.btn.addColor{
+                top: 0px;
+                left: 0px;
+              }
+            }
+          }
+          >ul.inline{
+            margin: 5px 10px 30px;
+            li:nth-child(4){
+              margin-left:-10px;
+            }
+            div.radio{
+              margin: 5px 0 15px 0;
+            }
+            .w-210{
+              margin-top:0 !important;
+            }
+          }
+          .fastForm{
+            .exclusivityBase .checkbox{
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+      form.similaridade{
+        div div[class^='w-']{
+          width: calc(~"50% - 8px") !important; 
+        }
+        div div[class^='w-680']{
+          width: calc(~"100% - 7px") !important;
+        }
+      }
+      /* Fluxo de Aprovação */
+      div.vpResume{
+        div.table_min dl{ 
+          /*width: 33% !important;*/
+        }
+        aside dl{
+          width: 48% !important; 
+        }
+      }
+      ul.legends li:first-child{ display: block; }
+    }
+    /********************************* DEFAULT MODAL ***************************/
+    #modal{
+      .modal-text{
+        width: 196px;
+      }
+    }
+  }
+  @media (max-width: 650px) {
+    main{
+      form.amostra{
+        ul.block:first-child {
+          margin-bottom: 150px;
+        }
+        div.imgAmostra {
+          top: 0 !important;
+          float: left !important;
+          margin-right: 100px;
+        }
+      }
+      form.prazo_preco_quant{
+        .content{
+          .l-bottom{
+            ul.inline{
+              [class^='w-']{
+                display: block;
+                margin-right: 221px;
+              }
+              div.radio{
+                margin: 5px 0 20px 0;
+              }
+              .w-210{
+                margin: -10px 6px 0 0 !important;
+              }
+            }
+          }
+          ul.codes{
+            li{
+                width: auto;
+                p{
+                  span{ 
+                    display: inline-block !important; 
+                    width: 28% !important;
+                    margin: 6px !important;
+                  }
+                }
+              }
+          }
+        }
+      }
+      form.similaridade{
+        .content{
+          .l-bottom{
+            &:nth-child(3){
+              ul.w-220{
+                border-left: none;
+                display: block;
+              }
+            }
+            &:nth-child(4){
+              .radio label, .checkbox label{
+                margin: 10px 25px 10px 0;
+              }
+            }
+          }
+        }
+      }
+      /* Fluxo de Aprovação */
+      div.vpResume{
+        div.table_min dl{ width: 50% !important; }
+        aside {
+          p{ width: 70%; }
+          em{ 
+            margin-top: 0; text-align: left;
+            strong{
+              display: inline-block;
+            }
+          }
+          dl{ width: auto; }
+          strong.limitedDate{
+            margin-right: 5px;
+          }
+        }
+        div.base{
+          div.similar{
+            aside{
+              dl{ width: 100% !important; }
+            }
+          }
+        }
+        div.prazo_preco_qnt{
+          aside.colors{
+            dl{ 
+              width: 28% !important; 
+              &:first-child{
+                width: 70% !important; 
+              }
+            }
+          }
+        }
+        &.validacao{
+          .btnsActions{
+            float: none; text-align: center; padding:46px 0 0; 
+            a{ width: 235px; top:0; float: none; margin: 10px auto; } 
+          }
+          div.conditions{
+            aside.colors{
+              dl{
+                &:extend(main div.vpResume div.prazo_preco_qnt aside.colors dl);
+                &:first-child{
+                  &:extend(main div.vpResume div.prazo_preco_qnt aside.colors dl:first-child);
+                }
+                &.last{
+                  width: 100% !important;
+                }
+              }
+            }
+          }
+          ul.info li{
+            padding-bottom: 5px;
+            strong{
+              display: block; padding-bottom: 3px;
+            }
+          }
+        }
+      }
+      form.comercial .content, form.financeiro .content, form.superintendencia .content{
+        > div{
+          ul li{
+            &.block textarea{ width: calc(~"100% - 10px"); }
+            input[type=button]{ float: none; margin: 15px calc(~"50% - 57px") 0 !important; }
+          }
+          p.right{ float: none; margin: -15px 0 10px 0; text-align: center; }
+        }
+      }
+      // form.financeiro .content > div ul li, form.superintendencia .content > div ul li{
+      //   &.w-450{
+      //     width: auto; margin-right: 10px;
+      //   }
+      //   &.block div.w-235{
+      //     // width: calc(~"100% - 10px") !important;
+      //   }
+      //   ul.inline.w-235{
+      //     margin: 0; display: block; width: auto; padding: 20px 0 0;
+      //   }
+      // }
+    }
+  }
+  @media (max-width: 530px) {
+    .inserted-color{
+      width: 100%;
+    }
+  }
+  @media (max-width: 510px) {
+    .enviar-mobile{
+      display: block;
+    }
+    .enviar-screen{
+      display: none;
+    }
+  }
+  @media (max-width: 425px) {
+    .l-bottom{
+      width: 300px;
+    }
+    .financeiro,.superintendencia{
+      fieldset{
+        .l-bottom{
+          width: 350px;
+        }
+        #totalAmount, #totalValue{
+          width: 330px;
+        }
+      }
+    } 
+    main{
+      nav{
+        >ul{
+          >li{
+            width: 100%;
+            text-align: center;
+            >ul{
+              >li{
+                width: 100%;
+                margin:0 -1px !important;
+                &:after{
+                  display:none;
+                }
+              }
+            }
+          }
+        }
+      }
+      form:not(.base){
+        div[class^='w-']{
+          width: 100% !important; 
+        }
+        .l-both, .msg{
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      form.base{
+        div[class^='w-']{
+          width: 100% !important; 
+          .btns a{
+            width: calc(~"50% - 4px") !important;
+          }
+        }
+        ul{ 
+          li{
+            display: block;
+            padding-bottom: 10px;
+          }
+        }
+        .newBase{
+          > div:not(.l-bottom){
+            width:100%;
+          }
+        }
+      }
+      form.amostra{
+        .radio, .checkbox{
+          >em{
+            display: block;
+            padding-left: 50px;
+          }
+        }
+      }
+      form.finalidade_produto{
+        fieldset{
+          .l-bottom{
+            p.title{ padding-left: 0; }
+            >ul{
+              li[class^='w-']{
+                position: relative !important;
+                display: block !important;
+                margin: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+      form.prazo_preco_quant{
+        .content{
+          >ul.inline{
+            margin-left: 0 !important;
+          }
+          ul.inline{
+            [class^='w-']{
+              display: block;
+              width: 98%;
+            }
+            div.radio{
+              margin: 5px 0 20px 0;
+            }
+            .w-210{
+              margin-top:15px !important;
+            }
+            &.amountByColor{
+              ul.codes{
+                a.ico-circle{
+                  top: 72px !important;
+                }
+              }
+              a.btn.addColor{
+                top: -15px;
+                left: 10px;
+              }
+              // div.radio{
+              //   width: 121px !important;
+              // }
+            }
+          }
+          .color-type{
+            width: 100%;
+          }
+          .commercialConditions{
+            .w-170{
+              margin: 8px 0 -20px 1px !important;
+              height: 50px !important;
+            }
+            .deadline{
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+      form.similaridade{
+        .content{
+          .l-bottom{
+            &:first-child{
+              .radio{
+                label{
+                  margin-right: 25px;
+                  margin-bottom: 10px;
+                }
+              }
+            }
+          }
+        }
+        div div[class^='w-']{
+          width: 100% !important; 
+        }
+      }
+      /* Fluxo de Aprovação */
+      div.vpResume {
+        aside dl{
+          width: 100%;
+        }
+        div.table_min{
+          dl{ 
+            width: 100% !important;
+          }
+          &.no_latbars dl dd{
+            border-left: 2px solid #e7e7e8;
+            border-right: 2px solid #e7e7e8;
+          }
+
+        }
+        div.similaridade{
+          aside{
+            dl{ width: 98% !important; }
+          }
+        }
+        &.validacao{
+          ul.info li{
+            display: block;
+            width: 100% !important;
+          }
+          form.finalResult{
+            div.approved{
+              ul.w-300{
+                width: 100% !important;
+                padding: 0 15px 15px 0;
+              }
+            }
+          }
+        }
+      }
+      div.table{
+        height: 300px;
+      }
+      p.vp_info{
+        .txt-sets(left,#a3acb5,0.8125,400); padding: 30px 10px 0; margin-bottom: -20px;
+        strong{font-weight: 700; color: @dark-blue; }
+      }
+    }
+    #modal{
+      p{font-size: 8.5pt;}
+    }
+  }
+  @media (max-width: 320px) {
+    .financeiro,.superintendencia{
+      fieldset{
+        .l-bottom{
+          width: 300px;
+        }
+        #totalAmount, #totalValue{
+          width: 290px;
+        }
+      }
+    }
+    .left-320{
+      float: left;
+      margin-top: -20px;
+    }
+    main{
+      header{
+        h1 {
+          margin: 33px 10px 9px;
+        }
+        h2{
+          font-size: 1.0em;
+        }
+      }
+    }
+    form.prazo_preco_quant{
+      .content{
+        .amountByColor{
+          a.btn.addColor{
+            top: -10px !important;
+            left: -65px !important;
+          }
+          .pantoneType{
+            top: 0 !important;
+            right: 0 !important;
+          }
+          ul.codes{
+            a.ico-circle{
+              top: 28px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

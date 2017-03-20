@@ -1,0 +1,277 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="http://institucionalteste/vp_personalizada/css/font-awesome.min.css">
+      <style type="text/css">
+        @charset "utf-8";
+        /* GERAL */
+        body,
+        html,
+        div,
+        span,
+        a,
+        ul,
+        li,
+        dl,
+        dt,
+        dd,
+        section,
+        header,
+        p,
+        form,
+        fieldset,
+        button,
+        input {
+          border: none;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          position: relative;
+          text-decoration: none;
+          outline: none;
+        }
+        header,
+        section,
+        footer,
+        aside,
+        nav,
+        main,
+        article,
+        figure,
+        a,
+        span,
+        :after,
+        :before {
+          display: block;
+        }
+        body * {
+          outline: none;
+          border: 0;
+        }
+        html object {
+          display: none;
+        }
+        /**/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+        }
+        strong {
+          font-weight: 700;
+          display: block;
+          font-size: 0.9375rem;
+          color: #535658;
+        }
+        /* Variables */
+        /* Mixins and Functions */
+        /*******************************
+
+                    GLOBAL
+        *******************************/
+        .hide,
+        main nav > ul > li > ul,
+        main nav > ul > li.active > ul.disabled,
+        main form fieldset legend,
+        main .form fieldset legend {
+          display: none !important;
+          opacity: 0;
+          height: 0;
+        }
+        .w-500 {
+          width: 500px !important;
+        }
+        .left {
+          float: left;
+        }
+        .right {
+          left: 450px;
+          top: -62px;
+        }
+        textarea {
+          text-align: left;
+          color: #535659;
+          font-size: 0.93em;
+          font-weight: 400;
+          padding: 10px;
+          margin: 6px 0 5px;
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 100%;
+        }
+        body {
+          overflow-x: hidden;
+          overflow-y: auto;
+          width: 90%;
+          font: normal 100% 'Arial', sans-serif;
+          margin-left: 5%;
+          font-size: 18px;
+        }
+        .bottom {
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 60px;
+        }
+        .bottom img {
+          margin: 10px;
+        }
+        .bottom .btn {
+          text-align: center;
+          font-size: 0.93em;
+          font-weight: 700;
+          border: 1px solid #3374b5;
+          background: #287bca;
+          letter-spacing: -0.07em;
+          padding: 0 1em;
+          height: 38px;
+          cursor: pointer;
+          z-index: 99;
+          margin: 10px 10px 7px 0;
+          color: #fff;
+        }
+        .bottom .btn:before {
+          content: "";
+          height: 38px;
+          width: 0;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .bottom .btn span {
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .container {
+          position: relative;
+          float: left;
+          width: 100%;
+          height: auto;
+        }
+
+        /* TABLE */
+        table {
+          width: 100%;
+          font-size: 0.79em;
+          font-weight: 700;
+          position: relative;
+          float: left;
+          height: auto;
+        }
+        table,
+        th,
+        td {
+          border-collapse: collapse;
+        }
+        th,
+        td {
+          padding: 5px;
+          text-align: left;
+        }
+        table th {
+          height: 35px;
+          color: white;
+        }
+        tr.head th{
+          background-color: #a3acb5;
+        }
+        table td {
+          height: 25px;
+          word-wrap: break-word;
+          }
+        tr.head td{
+          border-top: 2px solid #e7e7e8;
+          border-bottom: 2px solid #e7e7e8;
+        }
+        tr.l-bottom{
+          border-bottom: 2px solid #ced4d9; 
+        }
+        .title {
+          line-height: 1.250em;
+          text-align: left;
+          font-size: 1.250em;
+          font-weight: 700;
+        }
+        .subtitle{
+          line-height: 1.125em;
+          text-align: left;
+          font-size: 1.125em;
+          font-weight: 700;
+        }
+        .view {
+          text-align: left;
+          color: #535659;
+          font-size: 0.9375em;
+          line-height: 0.937em;
+          padding-left: 10px;
+        }
+
+        .view li{
+          height: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <table>
+          <tr class="head">
+            <th>Proposta VP Nº</th>
+            <th>Cód. Cliente</th> 
+            <th>Nome Cliente</th>
+            <th>Contato</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Data</th>
+          </tr>
+          <tr class="head">
+            <td id="clientVpNumber" class="view">20161215407</td>
+            <td id="clientCode" class="view">1382748200</td> 
+            <td id="clientName" class="view">LOJAS RENNER S/A</td>
+            <td id="contact" class="view">AAAAAA</td>
+            <td id="phone" class="view">12345678</td>
+            <td id="email" class="view">safasf@asjgjaig.com</td>
+            <td id="clientDate" class="view">15/12/2016</td>
+          </tr>
+          <tr>
+            <td colspan="5"><p class="view">Prezado Cliente</p></td>
+          </tr>
+          <tr>
+            <td colspan="5"><p class="view">Agradecemos a sua solicitação e informamos a seguir a nossa avaliação:</p></td>
+          </tr>
+          <tr class="l-bottom">
+            <td colspan="7">
+              <p class="view" id="unviable">Lorem ipsum , Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,Lorem ipsum ,</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <br>
+              <p class="view">Colocamo-nos a disposição para quaisquer exclarecimentos.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <br>
+              <br>
+              <br>
+              <p class="view">Atenciosamente,</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="bottom">
+        <br>
+        <p id="commercialManager" class="view">Nome do Gerente comercial</p><br>
+        <p id="emailManager" class="view">teste@teste.com.br</p><br>
+        <img src="http://institucionalteste/vp_teste/images/logo-focus-textil.png" height="38" width="141"/>
+      </div>
+    </body>
+  </html>

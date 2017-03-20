@@ -1,0 +1,213 @@
+<form class="base">
+  <fieldset>
+    <legend>Base existe ou nova?</legend>
+    <div class="content">
+      <div class="w-410">
+        <div class="btns">
+          <a class="btn dark left first_child" data-value="1" href="javascript:void(0);">Base Existente</a>
+          <a class="btn dark left" data-value="0" href="javascript:void(0);">Base Nova</a>
+        </div>
+      </div>
+      <!-- Base Existente -->
+      <div class="existBase hide base">
+         <div class="w-410">
+           <div class="search">
+             <input id="findProduct" type="text" placeholder="Digite o código do artigo:" value="" maxlength="9" />
+             <span><input id="spotlight" type="button" value="Search Product" /></span>
+           </div>
+            <span class="little-break">&nbsp;</span>
+            <ul class="block codes"></ul>
+         </div>
+         <span class="little-break">&nbsp;</span>
+         <ul>
+          <div class="choose-cboxes">
+             <li>
+               <div class="radio">
+                 <input id="tinto" type="radio" name="existBase" value="tinto" data-text="tinto"/>
+                 <label for="tinto">Cor Nova</label>
+               </div>
+             </li>
+             <li>
+               <div class="radio">
+                 <input id="estampado" type="radio" name="existBase" value="estampado" data-text="estampado" />
+                 <label for="estampado">Estampa Nova</label>
+               </div>
+             </li>
+             <li>
+               <div class="radio">
+                 <input id="fio_tinto" type="radio" name="existBase" value="fio_tinto" data-text="fio tinto" />
+                 <label for="fio_tinto">Padronagem  Nova (Fio Tinto)</label>
+               </div>
+             </li>
+           </div>
+         </ul>
+      </div>
+      
+      <!-- Base Nova -->
+      <div class="newBase hide base">
+         <div class="l-bottom">
+           <ul>
+             <li>
+               <div class="radio">
+                 <input id="baseTypeA" type="radio" name="baseType" value="Similar" />
+                 <label for="baseTypeA">Similar alguma base da Focus</label>
+               </div>
+               <p>Informar código com 9 dígitos</p>
+             </li>
+             <li>
+               <div class="radio">
+                 <input id="baseTypeB" type="radio" name="baseType" value="Nova" />
+                 <label for="baseTypeB">Totalmente Nova</label>
+               </div>
+               <p>Fornecer Amostra</p>
+             </li>
+           </ul>
+         </div>
+         <ul class="hide">
+          <div class="choose-radio">
+            <div class="l-bottom">
+              <p class="title baseType">Escolha um tipo de tecimento</p>
+               <li>
+                 <div class="radio">
+                   <input id="plano" type="radio" name="newBase" value="plano" data-text="plano"/>
+                   <label for="plano">Plano</label>
+                 </div>
+               </li>
+               <li>
+                 <div class="radio">
+                   <input id="malha" type="radio" name="newBase" value="malha" data-text="malha" />
+                   <label for="malha">Malha</label>
+                 </div>
+               </li>
+               <li>
+                 <div class="radio">
+                   <input id="naoTecido" type="radio" name="newBase" value="naoTecido" data-text="naoTecido" />
+                   <label for="naoTecido">Não Tecido</label>
+                 </div>
+               </li>             
+               <li>
+                 <div class="radio">
+                   <input id="outros" type="radio" name="newBase" value="outros" data-text="outros" />
+                   <label for="outros">Outros</label>
+                 </div>
+               </li>
+               <li class="specify">
+                  <div class="w-300">
+                    <label>Especificar</label>
+                    <input id="specify" name="specify" type="text" value="" disabled="disabled" />
+                  </div>
+               </li>
+             </div>
+             <p class="title baseType space">Escolha um tipo de base</p>
+             <li>
+               <div class="radio">
+                 <input id="tinto2" type="radio" name="type" value="tinto2" data-text="tinto" />
+                 <label for="tinto2">Tinto</label>
+               </div>
+             </li>
+             <li>
+               <div class="radio">
+                 <input id="fio_tinto2" type="radio" name="type" value="fio_tinto2" data-text="fio tinto" />
+                 <label for="fio_tinto2">Fio Tinto</label>
+               </div>
+             </li>
+             <li>
+               <div class="radio">
+                 <input id="estampado2" type="radio" name="type" value="estampado2" data-text="estampado" />
+                 <label for="estampado2">Estampado</label>
+               </div>
+             </li>
+              <div class="w-680 description">
+                <label>Descrição da necessidade segundo o Cliente e/ou observações</label>
+                <textarea id="others" name="others" placeholder="Preencha este campo..."></textarea>
+              </div>
+           </div>
+         </ul>
+         <div class="hide similar">
+          <div class="inputs">
+            <div class="w-410">
+              <div class="search">
+                 <input id="findProduct2" type="text" placeholder="Digite o código do artigo similar:" value="" maxlength="9" />
+                 <span><input id="spotlight2" type="button" value="Search Product" /></span>
+              </div>
+              <span class="little-break">&nbsp;</span>
+              <ul class="block codes"></ul>
+            </div>
+            <p class="title">Qual alteração deseja fazer?</p>
+            <div class="base-changes w-270 left">
+              <ul class="product-change">
+                  <li>
+                    <label class="input-title">Largura (cm)</label>
+                    <input id="width" class="w-90 left" type="text" placeholder="cm" value="" fill="largura" />
+                    <p class="ou left">ou</p>
+                  </li>
+                  <li class="gramatura">
+                    <label class="input-title">Gramatura</label>
+                    <input id="grammageA" class="w-90 amount left" placeholder="" type="text" value="" fill="gramatura" />
+                    <div class="radio nec">
+                       <input id="nec" type="radio" name="gram" value="g/m2" />
+                       <label for="nec">g/m2</label>
+                     </div>
+                     <div class="radio nec2">
+                       <input id="nec2" type="radio" name="gram" value="g/m" />
+                       <label for="nec2">g/m</label>
+                     </div>
+                    <p class="ou left">ou</p>
+                  </li>
+                  <li>
+                    <label class="input-title">Rendimento (m/kg)</label>
+                    <input id="yieldA" class="w-90 left" placeholder="m/kg" type="text" value="" fill="rendimento" />
+                    <p class="ou left">ou</p>
+                  </li>
+              </ul>
+              <ul class="descrip">
+                  <li>
+                    <label>Descrição</label>
+                    <input id="widthDescription" type="text" value="" fill="largura" />      
+                  </li>
+                  <li class="gramatura">
+                    <label>Descrição</label>
+                    <input id="grammageDescription" type="text" value="" fill="gramatura" />
+                  </li>
+                  <li> 
+                    <label>Descrição</label>
+                    <input id="yieldDescription" type="text" value="" fill="rendimento" />
+                  </li>
+              </ul>
+            </div>
+            <!-- <div class="w-400 left">
+              <label>Descrição</label>
+              <input id="widthDescription" type="text" value="" />              
+              <label>Descrição</label>
+              <input id="grammageDescription" type="text" value="" />   
+              <label>Descrição</label>
+              <input id="yieldDescription" type="text" value="" />
+            </div> -->
+            <div class="w-680">
+              <label>Composição</label>
+              <input id="composition" type="text" value="" />
+            </div>
+            <div class="w-680">
+              <label>Acabamento (obrigatório fornecer amostra e descrição) </label>
+              <input id="finishing" type="text" value="" />
+            </div>
+            <div class="w-680">
+              <label>Descrição da necessidade segundo o Cliente e/ou observações</label>
+              <textarea id="others2" name="others2"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="little-break">&nbsp;</span>
+    <a class="btn finish right SolicitacaoVPCriar1 SolicitacaoVPAlterar4 hide enviar-screen" href="javascript:void(0);">Enviar Solicitação de VP <span><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>
+
+       <a class="btn next right SolicitacaoVPCriar1 SolicitacaoVPAlterar4 hide" href="javascript:void(0);">Salvar Dados<span></span></a>
+       <a class="btn prev right" href="javascript:void(0);"><span><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i></span>Anterior</a>
+  
+   
+
+    <a class="btn finish right SolicitacaoVPCriar1 SolicitacaoVPAlterar4 hide enviar-mobile" href="javascript:void(0);">Enviar Solicitação de VP <span><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>
+
+  </fieldset>
+</form>

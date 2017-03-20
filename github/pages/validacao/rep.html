@@ -1,0 +1,165 @@
+<div class="vpResume validacao">
+	<!--a class="btn prev left" href="javascript:void(0);"><span><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i></span>Voltar</a-->
+	<div class="left">
+		<a class="btn prev left" href="#validacao_rep"><span><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i></span>Voltar</a>
+		<!-- <a class="btn left" href="javascript:void(0);">Editar</a>
+		<a class="btn left" href="javascript:void(0);">Salvar</a> -->
+	</div>
+	<!-- <div class="btnsActions">
+		<a class="btn" href="javascript:void(0);">Imprimir Proposta Cliente</a>
+		<a class="btn" href="javascript:void(0);">Enviar Proposta por e-Mail</a>
+	</div> -->
+	<span class="little-break">&nbsp;</span>
+	<h2 class="t-center"><p>Resumo da Solicitação</p></h2>
+	
+	<div class="table_print">
+		<header>
+			<img src="images/logo-branco-transp.png" />
+	       	<p>Validação da Proposta de Venda Personalizada</p>
+			<ul class="right">
+				<li><strong id="numero">No. </strong> </li>
+				<li><strong id="data">Data: </strong> <p></p></li>
+			</ul>
+		</header>
+		<ul>
+			<li class="w-100"><strong id="razaoSocial">Razão Social: </strong></li>
+			<li class="w-30"><strong id="nomeFantasia">Nome Fantasia: </strong></li>
+			<li class="w-30"><strong id="marca">Marca: </strong></li>
+			<li class="w-30"><strong id="codigoCliente">Código Cliente: </strong></li>
+			<li class="w-30"><strong id="nomeContato">Nome contato: </strong></li>
+			<li class="w-30"><strong id="email">E-mail: </strong></li>
+			<li class="w-30"><strong id="telefone">Telefone: </strong></li>
+			<li class="w-60"><strong id="gestor">Gerente Comercial: </strong></li>
+			<li class="w-30"><strong id="representante">Representante: </strong></li>
+		</ul>
+	</div>
+
+	<ul class="info hide">
+		<li class="w-60"><strong id="aprovadoPor">Aprovado por: </strong></li>
+		<li><strong id="cargo">Cargo: </strong></li>
+		<li><strong id="dataAprovacao">Data de aprovação: </strong></li>
+	</ul>
+
+	<form class="finalResult">
+		<fieldset>
+	    	<div class="content">
+				<p class="title">Proposta considerada Aprovada?</p>
+		        <ul class="inline">
+		          <li>
+		            <div class="radio">
+		              <input id="approved-item-1" type="radio" name="approved" value="1" />
+		              <label for="approved-item-1">Sim</label>
+		            </div>
+		          </li>
+		          <li>
+		            <div class="radio">
+		              <input id="approved-item-2" type="radio" name="approved" value="0" />
+		              <label for="approved-item-2">Não</label>
+		            </div>
+		          </li>
+		        </ul>
+		        <div class="hide approved">
+					<p class="title">Deseja aprovar a amostra? <em>(Strike-off, Lab Dip, Hand Loom, etc)</em></p>
+			        <ul class="inline">
+			          <li>
+			            <div class="radio">
+			              <input id="sample-item-1" type="radio" name="sample" value="1" />
+			              <label for="sample-item-1">Sim</label>
+			            </div>
+			          </li>
+			          <li>
+			            <div class="radio">
+			              <input id="sample-item-2" type="radio" name="sample" value="2" />
+			              <label for="sample-item-2">Não</label>
+			            </div>
+			          </li>
+			        </ul>
+			        <div class="inline">
+						<li class="w-150">
+							<label for="itemCode"><p class="cus">Código do artigo</p></label>
+							<input id="itemCode" type="text" value="" disabled />
+						</li>
+						<li class="w-335">
+							<label><p class="Q-total">Nome do artigo</p></label>
+							<input id="itemName" type="text" value="" disabled />
+						</li>
+			        </div>
+			        <div class="inline">
+						<div class="w-300">
+						  	<label class="title" for="justify">Quantidade desejada total:</label>
+						  	<input type="text" id="justify" name="justify" value="" disabled />
+						</div>
+				        <ul class="w-300 inline">
+				          <li>
+				            <div class="radio">
+				              <input id="unit-item-1" type="radio" name="unit" value="1" disabled />
+				              <label for="unit-item-1">Metros</label>
+				            </div>
+				          </li>
+				          <li>
+				            <div class="radio">
+				              <input id="unit-item-2" type="radio" name="unit" value="2" disabled />
+				              <label for="unit-item-2">Quilos</label>
+				            </div>
+				          </li>
+				        </ul>
+					</div>
+					<ul class="info"></ul>
+					<div class="table_print approvement">
+						<p>Aprovo e concordo com todas as condições da proposta apresentada. Autorizo, também, a Focus a dar continuidade ao processo de desenvolvimento do artigo solicitado</p>
+					</div>
+					<div class="content infos">
+						<div class="w-300">
+							<strong>Aprovado por: </strong><input id="aprovadoPorInput" type="text" name="aprovadoPorInput" value="">
+						</div>
+						<div class="w-300">
+							<strong>Cargo: </strong><input id="cargoInput" type="text" name="cargoInput" value="">
+						</div>
+						<div class="w-295">
+							<strong>Data de aprovação: </strong><input id="dataAprovacaoInput" type="text" name="dataAprovacaoInput" value="" disabled>
+						</div>
+					</div>
+					<div class="btnsActions">
+						<a class="btn" name="approve" href="javascript:void(0);">Salvar</a>
+					</div>
+		        </div>
+		        <div class="hide disapproved">
+					<div class="w-300">
+					  	<label class="title" for="justify2">Justifique o motivo:</label>
+						<div class="w-400">
+						  	<textarea id="justify2" name="justify2" value="" />
+						</div>
+					</div>
+					<p class="title">Gostaria de receber uma nova proposta?</p>
+			        <ul class="inline">
+			          <li>
+			            <div class="radio">
+			              <input id="review-item-1" type="radio" name="review" value="1" />
+			              <label for="review-item-1">Sim</label>
+			            </div>
+			          </li>
+			          <li>
+			            <div class="radio">
+			              <input id="review-item-2" type="radio" name="review" value="2" />
+			              <label for="review-item-2">Não</label>
+			            </div>
+			          </li>
+			        </ul>
+			        <ul>
+			        	<li class="cancel hide">
+				  			<div class="btnsActions">
+								<a class="btn" name="cancel" href="javascript:void(0);">Cancelar / Encerrar Solicitação</a>
+							</div>
+			        	</li>
+			        	<li class="review hide">
+				  			<p class="msg approvement">A Solicitação será reavaliada e uma nova proposta será enviada</p>
+				  			<div class="btnsActions">
+								<a class="btn" name="review" href="javascript:void(0);">Rever Solicitação</a>
+							</div>
+			        	</li>
+			        </ul>
+	    		</div>
+		    </div>
+		</fieldset>
+	</form>
+</div>
