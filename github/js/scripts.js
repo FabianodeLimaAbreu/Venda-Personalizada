@@ -4405,6 +4405,13 @@ $(function() {
 	        			}
 	        		}
 
+	        		if($('.newBase').not('.hide').length) {
+						if (!$('input[name=nameRadio]:checked').length) {
+	    					$('#baseTitle').addClass('red-alert');
+	    					complete = false;
+	    				}
+	        		}
+
 	        		$('input[type=text]').each(function() {
 	        			if ($('.newBase').not('.hide').length) {
 		        			if ($(this).attr('id') !== 'itemCodeExist') {
@@ -4914,6 +4921,7 @@ $(function() {
                         Cliente: $('#clientName').val(),
                         CodCliente: $('#clientCode').val(),
                         Considerada: 0,
+                        Gestor: $('#manager').val(),
                         Data: $('#emissionDate').val(),
                         DataEncerramento: $('#finishDate').val(),
                         DataEnvio: $('#clientDate').val(),
@@ -5703,6 +5711,7 @@ $(function() {
                         Cliente: $('#clientName').val(),
                         CodCliente: $('#clientCode').val(),
                         Considerada: 0,
+                        Gestor: $('#manager').val(),
                         Data: $('#emissionDate').val(),
                         DataEncerramento: $('#finishDate').val(),
                         DataEnvio: $('#clientDate').val(),
@@ -5884,7 +5893,7 @@ $(function() {
 	        		$('input[id*="quantidadeConfirmada"]').on('blur', function() {
 	        			if ($(this).val() !== $("#quantidadeOriginal"+$(this).attr("data-cod")).val()) {
 	        				var modal = new Modal();
-							modal.open('Atenção!',"Em caso de alteração de quantidade, a VP será reavaliada!",!0,!1);
+							modal.open('Atenção!',"Quantidade original alterada. Contatar o seu Gerente.",!0,!1);
 	        			}
 	        		});
 
