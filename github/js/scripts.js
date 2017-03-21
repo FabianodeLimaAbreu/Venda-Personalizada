@@ -219,7 +219,8 @@ $(function() {
                             vendapersonalizada.similaridade(code); 
                             break;
                             case 'fluxo/inicial':
-                            vendapersonalizada.fluxo_inicial(); 
+                            	vendapersonalizada.getComboList();
+                            	vendapersonalizada.fluxo_inicial(); 
                             break;
                             case 'fluxo/resumo':
                             vendapersonalizada.fluxo_resumo(code); 
@@ -296,13 +297,15 @@ $(function() {
                             	vendapersonalizada.superintendencia(code); 
                             break;
                             case 'validacao/inicial':
-                            vendapersonalizada.validacao_inicial(); 
+                            	vendapersonalizada.getComboList();
+                            	vendapersonalizada.validacao_inicial(); 
                             break;
                             case 'validacao/resumo':
                             vendapersonalizada.validacao_resumo(code); 
                             break;                            
                             case 'validacao_rep/inicial':
-                            vendapersonalizada.validacao_rep(code); 
+                            	vendapersonalizada.getComboList();
+                            	vendapersonalizada.validacao_rep(code); 
                             break;
                             case 'validacao/rep':
                             vendapersonalizada.validacao_result(code); 
@@ -355,6 +358,39 @@ $(function() {
                 $('.m_menu a').click();
                 $('.m_menu').toggleClass('active');
             },
+
+            /**
+		    * `This method is called in a page that need to request a comboservice. This method request a list and call createComponent to write itens`
+		    * @memberOf VendaPersonalizada#
+		    */
+            getComboList:function(){
+		        $.get('http://was-dev/focus24/Services/VP.svc/Gestores/', function(a) {
+		        	vendapersonalizada.createComponent(a,$("#manager"),"gestores");
+                }).fail(function() {
+                    var modal = new Modal();
+					modal.open('Um erro Ocorreu!', 'Contate o administrador do sistema.', !0, !1);
+                });
+            },
+
+            /**
+		    * `This method is called when is necessary to create a list (combobox) of itens.`
+		    * @memberOf VendaPersonalizada#
+		    * @param {array} list. A data list passed as param.
+		    * @param {component} comp. The component itself.
+		    * @param {String} what. What's the name of it, to a switch case.
+		    */
+		    createComponent:function(data,comp,what){
+		      var i,html="";
+		      switch (what){
+		        case "gestores":
+		          html+="<option value=''></option>";
+		          for(i=0;i<data.length;i++){
+		            html+="<option value='"+data[i].Gestor+"'>"+data[i].VKBUR+" - "+data[i].Gestor+"</option>";
+		          }
+		          break;
+		      }
+		      comp.html(html);
+		    },
 
 		    /**
 			    * Return to previous page
@@ -4946,6 +4982,7 @@ $(function() {
                     } else {
                     	PROPLIST.GesRep = "X";
                     }
+                    console.dir(PROPLIST);
 
                     $.ajax({
                         url: 'http://was-dev/Focus24/Services/VP.svc/PropostaList/0',
