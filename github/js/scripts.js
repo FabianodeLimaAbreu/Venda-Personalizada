@@ -31,7 +31,7 @@ $(function() {
             icons: [
                 {"id":0,"classname":"fa-check waiting","name":"Pendente"},
                 {"id":1,"classname":"fa-check success","name":"Aprovada"},
-                {"id":2,"classname":"fa-check warning","name":"Aprovada com Restricao"},
+                {"id":2,"classname":"fa-check warning","name":"APROVADA COM RESTRIÇÃO"},
                 {"id":3,"classname":"fa-times error","name":"Reprovada"},
                 {"id":4,"classname":"fa-check aware","name":"Ciente/Avaliada"}
             ],
@@ -478,7 +478,7 @@ $(function() {
 					var modal = new Modal();
 					var n = $('.repre_name').text().split('Nº ')[1];
 					vendapersonalizada.vpData[0].VPNumber = '';
-					modal.open('VP ' + n + ' Aguardando aprovação!', 'Feche esta janela.', !1, vendapersonalizada.goHome);
+					modal.open('VP ' + n + ' 	 aprovação!', 'Feche esta janela.', !1, vendapersonalizada.goHome);
                 }).fail(function() {
                     var modal = new Modal();
 					modal.open('Um erro Ocorreu!', 'Contate o administrador do sistema.', !0, !1);
@@ -3401,6 +3401,7 @@ $(function() {
                         traditional: true,
                         success: function(data) {
                             var retorno = JSON.parse(data);
+                            console.dir(retorno);
                             var html = "";
 
                             if (just_return) {
@@ -4837,7 +4838,7 @@ $(function() {
                 $(".save_button").click(function() {
                 	if ($(".no_latbars li a span.waiting").not('a[name=Status_Negociacao] span.waiting').length > 1) {
                 		var modal=new Modal();
-	        			modal.open('Ação não realizada!','Desconsiderando "Financeiro Custos" e "Importação", é necessária a avaliação de todos os envolvidos.',!0,!1);
+	        			modal.open('Ação não realizada!','É necessária a avaliação de todos os envolvidos.',!0,!1);
 	        			return !1;
                 	}
 
@@ -4934,6 +4935,9 @@ $(function() {
                         VPCode:"",
                         VPCodeBase: ""
                     }
+                    if($('#status').val() === "PENDENTE"){
+            			PROPLIST.Status="";
+            		}
 
                     if (self.usr.TIPO === "GESTOR") {
                     	PROPLIST.GesRep = self.usr.VKBUR;
@@ -4954,25 +4958,50 @@ $(function() {
                             $('dd').remove();
 
                             $.each(retorno, function(index, value) {
+
 	                            var self = this;
+	                            if($('#status').val() === "PENDENTE"){
+			            			if(value.StatusCliente === ""){
+			            				$('dt[name], dt[hasReview]').each(function(a, b) {
+			                                html = "<dd>";
 
-	                            $('dt[name], dt[hasReview]').each(function(a, b) {
-	                                html = "<dd>";
+		                                    if ($(this).attr("link")) {
+		                                    	html += "<a href='#validacao/resumo/" + self[$(this).attr("name")] + "'>" + self[$(this).attr("name")] + "</a>";
+		                                    } else if ($(this).attr("hasreview")) {
+		                                    	if (self.StatusCliente === "REVISADA") {
+		                                    		html += "VIDE SOLICITAÇÃO <a href='#/solicitacao/dados/" + self.VPCodeBase + "'>" + self.VPCodeBase + "</a>";
+		                                    	} else {
+		                                    		html += self[$(this).attr("name")] + "</dd>";
+		                                    	}
+		                                    } else {
+			                               		html += self[$(this).attr("name")] + "</dd>";
+		                                    }
 
-                                    if ($(this).attr("link")) {
-                                    	html += "<a href='#validacao/resumo/" + self[$(this).attr("name")] + "'>" + self[$(this).attr("name")] + "</a>";
-                                    } else if ($(this).attr("hasreview")) {
-                                    	if (self.StatusCliente === "REVISADA") {
-                                    		html += "VIDE SOLICITAÇÃO <a href='#/solicitacao/dados/" + self.VPCodeBase + "'>" + self.VPCodeBase + "</a>";
-                                    	} else {
-                                    		html += self[$(this).attr("name")] + "</dd>";
-                                    	}
-                                    } else {
-	                               		html += self[$(this).attr("name")] + "</dd>";
-                                    }
+			                                $(this).after(html);
+			                            });
+			            			}
+			            		}
+			            		else{
+			            			$('dt[name], dt[hasReview]').each(function(a, b) {
+		                                html = "<dd>";
 
-	                                $(this).after(html);
-	                            });
+	                                    if ($(this).attr("link")) {
+	                                    	html += "<a href='#validacao/resumo/" + self[$(this).attr("name")] + "'>" + self[$(this).attr("name")] + "</a>";
+	                                    } else if ($(this).attr("hasreview")) {
+	                                    	if (self.StatusCliente === "REVISADA") {
+	                                    		html += "VIDE SOLICITAÇÃO <a href='#/solicitacao/dados/" + self.VPCodeBase + "'>" + self.VPCodeBase + "</a>";
+	                                    	} else {
+	                                    		html += self[$(this).attr("name")] + "</dd>";
+	                                    	}
+	                                    } else {
+		                               		html += self[$(this).attr("name")] + "</dd>";
+	                                    }
+
+		                                $(this).after(html);
+		                            });
+			            		}
+	                            
+	                            
 	                        });
 							
 							// Substitui textos da tabela
@@ -5725,6 +5754,10 @@ $(function() {
                         VPCodeBase: ""
                     }
 
+                    if($('#status').val() === "PENDENTE"){
+            			PROPLIST.Status="";
+            		}
+
                     if (self.usr.TIPO === "GESTOR") {
                     	PROPLIST.GesRep = self.usr.VKBUR;
                     } else if (self.usr.TIPO === "REPRESENTANTE") {
@@ -5746,23 +5779,48 @@ $(function() {
                             $.each(retorno, function(index, value) {
 	                            var self = this;
 
-	                            $('dt[name], dt[hasReview]').each(function(a, b) {
-	                                html = "<dd>";
+	                            if($('#status').val() === "PENDENTE"){
+			            			if(value.StatusCliente === ""){
+			            				$('dt[name], dt[hasReview]').each(function(a, b) {
+			                                html = "<dd>";
 
-                                    if ($(this).attr("link")) {
-                                    	html += "<a href='#validacao/rep/" + self[$(this).attr("name")] + "'>" + self[$(this).attr("name")] + "</a>";
-                                    } else if ($(this).attr("hasreview")) {
-                                    	if (self.StatusCliente === "REVISADA") {
-                                    		html += "VIDE SOLICITAÇÃO <a href='#/solicitacao/dados/" + self.VPCodeBase + "'>" + self.VPCodeBase + "</a>";
-                                    	} else {
-                                    		html += self[$(this).attr("name")] + "</dd>";
-                                    	}
-                                    } else {
-	                               		html += self[$(this).attr("name")] + "</dd>";
-                                    }
+		                                    if ($(this).attr("link")) {
+		                                    	html += "<a href='#validacao/rep/" + self[$(this).attr("name")] + "'>" + self[$(this).attr("name")] + "</a>";
+		                                    } else if ($(this).attr("hasreview")) {
+		                                    	if (self.StatusCliente === "REVISADA") {
+		                                    		html += "VIDE SOLICITAÇÃO <a href='#/solicitacao/dados/" + self.VPCodeBase + "'>" + self.VPCodeBase + "</a>";
+		                                    	} else {
+		                                    		html += self[$(this).attr("name")] + "</dd>";
+		                                    	}
+		                                    } else {
+			                               		html += self[$(this).attr("name")] + "</dd>";
+		                                    }
 
-	                                $(this).after(html);
-	                            });
+			                                $(this).after(html);
+			                            });
+			            			}
+			            		}
+			            		else{
+			            			$('dt[name], dt[hasReview]').each(function(a, b) {
+		                                html = "<dd>";
+
+	                                    if ($(this).attr("link")) {
+	                                    	html += "<a href='#validacao/rep/" + self[$(this).attr("name")] + "'>" + self[$(this).attr("name")] + "</a>";
+	                                    } else if ($(this).attr("hasreview")) {
+	                                    	if (self.StatusCliente === "REVISADA") {
+	                                    		html += "VIDE SOLICITAÇÃO <a href='#/solicitacao/dados/" + self.VPCodeBase + "'>" + self.VPCodeBase + "</a>";
+	                                    	} else {
+	                                    		html += self[$(this).attr("name")] + "</dd>";
+	                                    	}
+	                                    } else {
+		                               		html += self[$(this).attr("name")] + "</dd>";
+	                                    }
+
+		                                $(this).after(html);
+		                            });
+			            		}
+
+	                            
 	                        });
 							
 							// Substitui textos da tabela
@@ -6193,14 +6251,13 @@ $(function() {
 				if ($("form").find("select").length) {
                     array_aux.selects.push($("form").find("select option:selected").text());
                 }
-
 	        	var array = {
 					Departamento:$("form").attr("name"),
                     Objeto:"["+JSON.stringify(array_aux.inputs)+","+JSON.stringify(array_aux.checks)+","+JSON.stringify(array_aux.textarea)+","+JSON.stringify(array_aux.selects)+"]",
 					Status:$(".question_form input:checked").attr('data-code'),
 					VPNumber:code
 				}
-
+							
 				$.ajax({
 					url: 'http://was-dev/Focus24/Services/VP.svc/AlteracaoFluxo/0',
 					data: JSON.stringify(array),
@@ -6215,12 +6272,20 @@ $(function() {
                                 "VPNumber":""
                             }
 
-                            $.map(vendapersonalizada.icons, function(val, i) {
-                                if (parseInt(array.Status) === val.id) {
-                                    arr.Status = "" + val.name;
-                                    arr.VPNumber = "" + code;
-                                }
-                            });
+                            //This attribute have been changed atempting to report in 10/03 (vide email)
+                            // $.map(vendapersonalizada.icons, function(val, i) {
+                            //     if (parseInt(array.Status) === val.id) {
+                            //         arr.Status = "" + val.name;
+                            //         arr.VPNumber = "" + code;
+                            //     }
+                            // });
+							if($(".no_latbars li a span.warning").length || $(".no_latbars li a span.error").length){
+								arr.Status=2;
+							}
+							else{
+								arr.Status=$(".question_form input:checked").attr('data-code');
+							}	
+							arr.VPNumber = "" + code;
 
                             $.ajax({
                                 url: 'http://was-dev/Focus24/Services/VP.svc/AlteraStatusVP/0',
