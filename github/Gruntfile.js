@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       //Copy all the files, except that
       build:{
         //The line bellow can be changed accordding to the project
-        src:['**','!node_modules/**','!**/Gruntfile.js','!**/package.json','!less/**','!images/psd/**','!vp_teste/**',"!docs/**", "!files/**"],
+        src:['**','!node_modules/**','!**/Gruntfile.js','!**/package.json','!less/**','!images/psd/**','!vp_teste/**',"!docs/**"],
         dest:'dist',
         expand:true
       },
