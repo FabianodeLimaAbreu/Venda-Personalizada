@@ -60,8 +60,6 @@ $(function() {
                 this.toTop('.toTop');
                 $('div.loader').fadeOut('fast');
                 $(".repre_name").text(this.usr.Nome);
-                vendapersonalizada.loader(1);
-                vendapersonalizada.load('inicial');
 	        },
 
 		    /**
@@ -192,6 +190,7 @@ $(function() {
 				    },
 				    complete: function() { 
 				    	vendapersonalizada.loader(0); 
+				    	console.dir(self.usr);
 				    	var perfil=self.usr.Perfil.DescPerfil;
 				    	switch(page) {
 				    		case 'inicial':
@@ -6455,6 +6454,7 @@ $(function() {
     		var self = this;
     		
     		this.getPerfil = function(txt) {
+    			vendapersonalizada.loader(1);
     			var tables = ["SolicitacaoVP","FluxoAprovacao","PropostaVP","ValidacaoPropostaVP"];
     			
     			if (context.usr.Nome === "TIWEB") {
@@ -6471,8 +6471,6 @@ $(function() {
 				var post={
 					Perfil:txt
 				};
-				console.dir(post);
-				console.dir(context.usr);
 			  	$.ajax({
 	                url: 'http://was-dev/Focus24/Services/VP.svc/getPerfil/0',
 	                data: JSON.stringify(post),
@@ -6484,6 +6482,7 @@ $(function() {
 					    tables.forEach(function(el,index) {
 					    	self.setPermissions(context.usr.Perfil["" + el],el);
 					    });
+					    vendapersonalizada.load('inicial');
 	                },
 	            });
     		};
