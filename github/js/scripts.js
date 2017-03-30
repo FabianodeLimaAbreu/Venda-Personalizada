@@ -623,8 +623,8 @@ $(function() {
 				$(document).ready(function() {
 
 					// Retorna todas as VPs pendentes para solicitação, atreladas ao código informado e apresentadas em Home > Solicitação de Venda
-	        		
-	        		var vpRepresentante = "http://was-dev/Focus24/Services/VP.svc/custumerAll/" + (self.usr.TIPO === "GESTOR" ? self.usr.VKBUR : self.usr.CodRepresentante);
+	        		console.dir(self.usr);
+	        		var vpRepresentante = "http://was-dev/Focus24/Services/VP.svc/custumerAll/" + (self.usr.TIPO === "REPRESENTANTE" ? self.usr.CodRepresentante : self.usr.VKBUR);
 			        $.getJSON(vpRepresentante + "?callback=?", function (dadosRetorno) {
 						$.each(dadosRetorno, function (index, value) {
 						    var html = '';
@@ -891,7 +891,7 @@ $(function() {
 
 		        var self = this;
 	        	$('#Cod').blur(function() {
-	        		var customer = "http://was-dev/Focus24/Services/VP.svc/custumer/" + $('#Cod').val() + "/" + (self.usr.TIPO === "GESTOR" ? self.usr.VKBUR : self.usr.CodRepresentante);
+	        		var customer = "http://was-dev/Focus24/Services/VP.svc/custumer/" + $('#Cod').val() + "/" + (self.usr.TIPO === "REPRESENTANTE" ? self.usr.CodRepresentante : self.usr.VKBUR);
 			        $.getJSON(customer +"?callback=?", function (data) {
 
 			        	// Se o retorno for null, apresenta mensagem "Código não encontrado" e insere o focus no campo "Código"
@@ -946,7 +946,7 @@ $(function() {
 				
 				$('#Cod').keypress(function(e) {
 			    	if (e.which === 13) {
-		        		var customer = "http://was-dev/Focus24/Services/VP.svc/custumer/" + $('#Cod').val() + "/" + (self.usr.TIPO === "GESTOR" ? self.usr.VKBUR : self.usr.CodRepresentante);
+		        		var customer = "http://was-dev/Focus24/Services/VP.svc/custumer/" + $('#Cod').val() + "/" + (self.usr.TIPO === "REPRESENTANTE" ? self.usr.CodRepresentante : self.usr.VKBUR);
 				        
 				        $.getJSON(customer + "?callback=?", function (data) {
 				        	if (data.Status === null) {
@@ -6461,13 +6461,33 @@ $(function() {
     				txt = "Administrator";
     			}
 		  		
-		  		$.getJSON("http://was-dev/Focus24/Services/VP.svc/getPerfil/" + txt, function(a) {	   
+		  		/*$.getJSON("http://was-dev/Focus24/Services/VP.svc/getPerfil/" + txt, function(a) {	   
 				    context.usr.Perfil = a;
 				    tables.forEach(function(el,index) {
 				    	self.setPermissions(context.usr.Perfil["" + el],el);
 				    })
-			  	})
+			  	})*/
+
+				var post={
+					Perfil:txt
+				};
+				console.dir(post);
+				console.dir(context.usr);
+			  	$.ajax({
+	                url: 'http://was-dev/Focus24/Services/VP.svc/getPerfil/0',
+	                data: JSON.stringify(post),
+	                type: 'POST',
+	                contentType: "application/json; charset=utf-8",
+	                traditional: true,
+	                success: function(a) {
+	                	context.usr.Perfil = a;
+					    tables.forEach(function(el,index) {
+					    	self.setPermissions(context.usr.Perfil["" + el],el);
+					    });
+	                },
+	            });
     		};
+
 
     		this.setPermissions=function(val,attr) {
 				var iCria = 1;
@@ -6509,7 +6529,7 @@ $(function() {
                     if (c === "new") {
                       $(".repre_name").text(vendapersonalizada.usr.Nome);
                     } else {
-		        		var vpRepresentante = "http://was-dev/Focus24/Services/VP.svc/custumerAll/" + (self.usr.TIPO === "GESTOR" ? self.usr.VKBUR : self.usr.CodRepresentante);
+		        		var vpRepresentante = "http://was-dev/Focus24/Services/VP.svc/custumerAll/" + (self.usr.TIPO === "REPRESENTANTE" ? self.usr.CodRepresentante : self.usr.VKBUR);
 				        $.getJSON(vpRepresentante +"?callback=?", function (dadosRetorno) {
 				        	$.each(dadosRetorno, function() {
 				        		var self = this;
@@ -6541,7 +6561,7 @@ $(function() {
                     vendapersonalizada.vpData = [];
 	                vendapersonalizada.vpCode = c;               
                     vendapersonalizada.load(a + "/" + b, c);
-	        		var vpRepresentante = "http://was-dev/Focus24/Services/VP.svc/custumerAll/" + (self.usr.TIPO === "GESTOR" ? self.usr.VKBUR : self.usr.CodRepresentante)
+	        		var vpRepresentante = "http://was-dev/Focus24/Services/VP.svc/custumerAll/" + (self.usr.TIPO === "REPRESENTANTE" ? self.usr.CodRepresentante : self.usr.VKBUR)
 			        
 			        $.getJSON(vpRepresentante + "?callback=?", function (dadosRetorno) {
 			        	$.each(dadosRetorno, function() {
