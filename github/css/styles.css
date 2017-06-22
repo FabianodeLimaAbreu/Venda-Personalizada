@@ -211,6 +211,8 @@ main form input[type=text],
 main .form input[type=text],
 main form input[type=password],
 main .form input[type=password],
+main form input[type=date],
+main .form input[type=date],
 main form textarea,
 main .form textarea,
 main .vpResume.validacao input[type=text],
@@ -1297,7 +1299,9 @@ main .form .checkbox input[type=checkbox]:checked + label .before {
 main form input[type=text],
 main .form input[type=text],
 main form input[type=password],
-main .form input[type=password] {
+main .form input[type=password],
+main form input[type=date],
+main .form input[type=date] {
   text-align: left;
   color: #535659;
   font-size: 0.93em;
@@ -1310,7 +1314,9 @@ main .form input[type=password] {
 main form input[type=text].w-90,
 main .form input[type=text].w-90,
 main form input[type=password].w-90,
-main .form input[type=password].w-90 {
+main .form input[type=password].w-90,
+main form input[type=date].w-90,
+main .form input[type=date].w-90 {
   width: 90%;
 }
 main form textarea,
@@ -2917,6 +2923,9 @@ main form.inicial {
 }
 main form.inicial .content div.w-335.block {
   margin-right: 50px;
+}
+main form.inicial select {
+  height: 40px;
 }
 main form.inicial select,
 main form.inicial input[type=date] {
